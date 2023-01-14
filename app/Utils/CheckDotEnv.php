@@ -39,7 +39,8 @@ OPENAI_API_KEY=your_api_key
 TXT;
             fwrite($env, $envSkel);
             fclose($env);
-        } catch (\Exception) {
+        } catch (\Exception $ex) {
+            echo $ex->getMessage() . "\n";
             throw new \Exception('Unable to create .env file');
         }
     }
