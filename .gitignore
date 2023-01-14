@@ -4,3 +4,4 @@
 /.vagrant
 builds/**
 .phpunit.result.cache
+.env
