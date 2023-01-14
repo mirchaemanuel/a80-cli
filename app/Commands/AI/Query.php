@@ -32,6 +32,16 @@ class Query extends Command
      */
     public function handle()
     {
+        //check if .env file exists, otherwise create it
+        if (CheckDotEnv::exists() === false) {
+            $this->error('.env file is not present');
+            $this->info('I\'m creating a .env file for you');
+            CheckDotEnv::create();
+            $this->info('Please edit the `.env` file and add your OpenAI API key');
+            $this->info('You can get your API key from https://beta.openai.com/account/api-keys');
+            return;
+        }
+
         //check .env file
         $openaiKey = config('ai.openai.api_key');
         if (empty($openaiKey)) {
