@@ -2,6 +2,8 @@
 
 namespace App\Utils;
 
+use Illuminate\Support\Facades\Storage;
+
 class CheckDotEnv
 {
 
@@ -12,7 +14,7 @@ class CheckDotEnv
      */
     public static function exists(): bool
     {
-        return file_exists(base_path('.env'));
+        return Storage::exists('.env');
     }
 
     /**
@@ -29,16 +31,12 @@ class CheckDotEnv
         }
 
         try {
-            //create .env file
-            $env     = fopen(base_path('.env'), 'wb');
-
             //skelton .env file
             $envSkel = <<<TXT
 # OpenAI
 OPENAI_API_KEY=your_api_key
 TXT;
-            fwrite($env, $envSkel);
-            fclose($env);
+            Storage::put('.env', $envSkel);
         } catch (\Exception $ex) {
             echo $ex->getMessage() . "\n";
             throw new \Exception('Unable to create .env file');
