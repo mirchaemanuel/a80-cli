@@ -29,13 +29,17 @@ class IntroCommand extends Command
      */
     public function handle()
     {
-        render(<<<'HTML'
-        <div class="ml-2 mt-2">
-            <div class="py-1 px-2 bg-blue text-black font-bold">
-                A80 | Mircha Emanuel D'Angelo | https://a80.it
+        $version = config('app.version');
+        render(<<<HTML
+        <div class="ml-2 mt-1">
+            <div class="font-bold underline">
+                A80-cli version {$version}
             </div>
-            <div class="py-1 px-2">
-                <div class="italic mb-1">Releases:</div>
+            <div class="mb-1">
+                Mircha Emanuel D'Angelo | https://a80.it
+            </div>
+            <div class="px-2">
+                <div class="mb-1">Releases:</div>
                 <table>
                     <thead>
                         <tr>
@@ -48,7 +52,13 @@ class IntroCommand extends Command
                         <tr>
                             <td>0.1</td>
                             <td>2023-01-14</td>
-                            <td>...</td>
+                            <td>
+                                <ul>
+                                    <li>Initial release</li>
+                                    <li>OpenAI client library</li>
+                                    <li>ai:query command</li>
+                                </ul>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
