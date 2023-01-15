@@ -135,7 +135,7 @@ class ListImageInFolderCommand extends Command
                     return;
                 }
                 $this->call('tools:image:thumb', [
-                    'filename'         => $image['path'],
+                    'imageName'         => $image['path'],
                     'output'           => File::dirname($image['path']) . '/' . ImageUtils::THUMB_PREFIX_NAME . $image['filename'],
                     '--width'          => $width,
                     '--quiet'          => true,
