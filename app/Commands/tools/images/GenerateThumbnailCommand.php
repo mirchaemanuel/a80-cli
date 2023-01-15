@@ -2,6 +2,8 @@
 
 namespace App\Commands\tools\images;
 
+use App\Exceptions\ImageUtilsException;
+use App\Utils\ImageUtils;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Storage;
@@ -52,8 +54,8 @@ class GenerateThumbnailCommand extends Command
         //get width and height
         $width = $this->option('width');
         if(!$width) {
-            $this->error('Width is required');
-            return;
+            $this->warn('Width not specified, using default value of 300');
+            $width = 300;
         }
 
         //get output filename
@@ -68,15 +70,22 @@ class GenerateThumbnailCommand extends Command
             return;
         }
 
-        $originalImage = Storage::path($filename);
+        /**
+         * check filename is an image using File facade
+         */
+        if(!str_starts_with(File::mimeType($filename), 'image/')){
+            $this->error('File is not an image');
+            return;
+        }
+
+        $originalImage = $filename;
 
         try {
-            $imagick = new \Imagick($originalImage);
-            $imagick->thumbnailImage($width, $width, true, false);
-            header("Content-Type: image/jpg");
-            Storage::put($output, $imagick->getImageBlob());
-        } catch (\ImagickException $e) {
-            $this->error('Imagick error: ' . $e->getMessage());
+            $outputBlob = ImageUtils::getImageThumbnail($originalImage, $width);
+            File::put($output, $outputBlob);
+            $this->info('Thumbnail generated in ' . $output);
+        } catch (ImageUtilsException $e) {
+            $this->error( $e->getMessage());
             return;
         }
     }
