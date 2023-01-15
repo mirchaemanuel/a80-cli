@@ -10,6 +10,21 @@ It is currently in the preliminary stage.
 
 In addition to the usual tools, I will add new ones to interact with **OpenAI** and more.
 
+## Work progress
+
+In this phase I am preparing the project in Laravel-Zero to accommodate the various tools.
+
+I had the opportunity to experiment with different aspects of this fantastic project by Nuno Maduro and I find it fantastic and fit for purpose.
+
+## Coming soon
+
+- scripts/tools that I currently use to manipulate and collect my photos
+- report generators
+- web tools
+    - crawler and scraper
+    - sitemap generator
+- ...
+
 ## OpenAI
 
 Currently there is only one command that allows you to ask questions to OpenAI:
