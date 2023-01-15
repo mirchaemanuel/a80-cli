@@ -77,7 +77,7 @@ class ListImageInFolderCommand extends Command
          */
         foreach($imagePaths as $key => $imagePath) {
             usort($imagePaths[$key], static function ($a, $b) {
-                return strtoupper($a['filename']) <=> strtoupper($b['filename']);
+                return strcasecmp($a['filename'], $b['filename']);
             });
         }
 
