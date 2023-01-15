@@ -15,7 +15,8 @@ class ListImageInFolderCommand extends Command
      * @var string
      */
     protected $signature = 'tools:image:list {folder}
-                            {--r|recursive : List image in subfolder.}';
+                            {--r|recursive : List image in subfolder.}
+                            {--o|output= : Output to a CSV file.}';
 
     /**
      * The description of the command.
@@ -36,7 +37,7 @@ class ListImageInFolderCommand extends Command
          * Get folder path
          */
         $folder = $this->argument('folder');
-        if(!File::isDirectory($folder)) {
+        if (!File::isDirectory($folder)) {
             $this->error('Folder not found');
             return;
         }
@@ -44,7 +45,7 @@ class ListImageInFolderCommand extends Command
         /**
          * Get all files in folder
          */
-        if($this->option('recursive')) {
+        if ($this->option('recursive')) {
             $files = File::allFiles($folder);
         } else {
             $files = File::files($folder);
@@ -54,20 +55,20 @@ class ListImageInFolderCommand extends Command
          * Get all imagePaths in folder
          */
         $imagePaths = [];
-        foreach($files as $file) {
+        foreach ($files as $file) {
             $mimeType = File::mimeType($file);
-            if(str_contains($mimeType, 'image')) {
+            if (str_contains($mimeType, 'image')) {
                 $imagePaths[$file->getPathInfo()->getRealPath()][] = [
-                    'path' => $file->getRealPath(),
-                    'filename' => $file->getFilename(),
-                    'size' => File::size($file),
-                    'mimeType' => $mimeType,
+                    'path'      => $file->getRealPath(),
+                    'filename'  => $file->getFilename(),
+                    'size'      => File::size($file),
+                    'mimeType'  => $mimeType,
                     'extension' => $file->getExtension(),
                 ];
             }
         }
 
-        if(empty($imagePaths)) {
+        if (empty($imagePaths)) {
             $this->warn('No image found');
             return;
         }
@@ -75,22 +76,43 @@ class ListImageInFolderCommand extends Command
         /**
          * Sort array imagePaths for key filename
          */
-        foreach($imagePaths as $key => $imagePath) {
+        foreach ($imagePaths as $key => $imagePath) {
             usort($imagePaths[$key], static function ($a, $b) {
                 return strcasecmp($a['filename'], $b['filename']);
             });
         }
 
+        /**
+         * Output to CSV file
+         */
+        if ($this->option('output')) {
+            $output = $this->option('output');
+            // check if output is writable
+            if (File::exists($output)) {
+                $this->error('Output file  already exists');
+                return;
+            }
+
+            $fp = fopen($output, 'wb');
+            fputcsv($fp, ['path', 'filename', 'size', 'mimeType', 'extension']);
+            foreach ($imagePaths as $key => $imagePath) {
+                foreach ($imagePath as $path => $image) {
+                    fputcsv($fp, $image);
+                }
+            }
+            fclose($fp);
+            $this->info('Output to CSV file: ' . $output);
+        }
+
         render(view('image-list', [
             'imagePaths' => $imagePaths,
         ]));
-
     }
 
     /**
      * Define the command's schedule.
      *
-     * @param  \Illuminate\Console\Scheduling\Schedule  $schedule
+     * @param Schedule $schedule
      * @return void
      */
     public function schedule(Schedule $schedule): void
