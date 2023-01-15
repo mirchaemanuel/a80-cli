@@ -57,7 +57,7 @@ class ListImageInFolderCommand extends Command
         foreach($files as $file) {
             $mimeType = File::mimeType($file);
             if(str_contains($mimeType, 'image')) {
-                $images[$file->getPath()][] = [
+                $images[$file->getPathInfo()->getRealPath()][] = [
                     'path' => $file->getRealPath(),
                     'filename' => $file->getFilename(),
                     'size' => File::size($file),
