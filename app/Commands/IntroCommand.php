@@ -60,6 +60,24 @@ class IntroCommand extends Command
                                 </ul>
                             </td>
                         </tr>
+                        <tr>
+                            <td>0.1.3</td>
+                            <td>2023-01-14</td>
+                            <td>
+                                <ul>
+                                    <li>tools:image:thumbnail</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>0.1.4</td>
+                            <td>2023-01-14</td>
+                            <td>
+                                <ul>
+                                    <li>tools:image:list</li>
+                                </ul>
+                            </td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
