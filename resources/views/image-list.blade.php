@@ -1,19 +1,19 @@
 <div class="mx-2 my-1">
-    @foreach ($images as $path => $imagePath)
+    @foreach ($imagePaths as $path => $images)
         <div class="w-full font-bold bg-green-400 text-black">
             - {{ $path  }}
         </div>
         <table>
             <thead>
             <tr>
-                <td>Filename</td>
-                <td>Extension</td>
-                <td>MimeType</td>
-                <td>Size</td>
+                <th>Filename</th>
+                <th>Extension</th>
+                <th>MimeType</th>
+                <th>Size</th>
             </tr>
             </thead>
             <tbody>
-        @foreach($imagePath as $image)
+        @foreach($images as $image)
             <tr>
                 <td>{{ $image['filename'] }}</td>
                 <td>{{ $image['extension'] }}</td>

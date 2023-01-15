@@ -22,7 +22,7 @@ class ListImageInFolderCommand extends Command
      *
      * @var string
      */
-    protected $description = 'List all images in folder (and subfolders) with some info';
+    protected $description = 'List all images in folder (and subfolders) with some info sorted by name';
 
     /**
      * Execute the console command.
@@ -51,13 +51,13 @@ class ListImageInFolderCommand extends Command
         }
 
         /**
-         * Get all images in folder
+         * Get all imagePaths in folder
          */
-        $images = [];
+        $imagePaths = [];
         foreach($files as $file) {
             $mimeType = File::mimeType($file);
             if(str_contains($mimeType, 'image')) {
-                $images[$file->getPathInfo()->getRealPath()][] = [
+                $imagePaths[$file->getPathInfo()->getRealPath()][] = [
                     'path' => $file->getRealPath(),
                     'filename' => $file->getFilename(),
                     'size' => File::size($file),
@@ -67,13 +67,22 @@ class ListImageInFolderCommand extends Command
             }
         }
 
-        if(empty($images)) {
+        if(empty($imagePaths)) {
             $this->warn('No image found');
             return;
         }
 
+        /**
+         * Sort array imagePaths for key filename
+         */
+        foreach($imagePaths as $key => $imagePath) {
+            usort($imagePaths[$key], static function ($a, $b) {
+                return strtoupper($a['filename']) <=> strtoupper($b['filename']);
+            });
+        }
+
         render(view('image-list', [
-            'images' => $images,
+            'imagePaths' => $imagePaths,
         ]));
 
     }
