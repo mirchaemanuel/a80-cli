@@ -22,7 +22,7 @@
         }
     ],
     "require": {
-        "php": "^8.0",
+        "php": "^8.1",
         "ext-imagick": "*",
         "illuminate/view": "^9.0",
         "laminas/laminas-text": "^2.9",

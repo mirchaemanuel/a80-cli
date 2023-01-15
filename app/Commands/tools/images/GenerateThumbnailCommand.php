@@ -16,9 +16,9 @@ class GenerateThumbnailCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'tools:image:thumbnail
-                            {filename : filename of the image}
-                            {output : output filename}
+    protected $signature = 'tools:image:thumb
+                            {imageName : path of the image}
+                            {output? : output filename. If omitted will be saved in the same folder with prefix "thumb_"}
                             {--w|width= : width of the thumbnail}
                             {--f|force= : overwrite existing file}';
 
@@ -45,57 +45,56 @@ class GenerateThumbnailCommand extends Command
         }
 
         //check if file exists
-        $filename = $this->argument('filename');
-        if (!File::exists($filename)) {
+        $imageName = $this->argument('imageName');
+        if (!File::exists($imageName)) {
             $this->error('File not found');
             return;
         }
 
         //get width and height
         $width = $this->option('width');
-        if(!$width) {
+        if (!$width) {
             $this->warn('Width not specified, using default value of 300');
             $width = 300;
         }
 
-        //get output filename
+        //get output imageName
         $output = $this->argument('output');
-        if(!$output){
-            $this->error('Output filename is required');
-            return;
+        if (!$output) {
+            $output = File::dirname($imageName) . '/' . ImageUtils::THUMB_PREFIX_NAME . File::basename($imageName);
+            $this->warn(sprintf("No output imageName specified. %s will be used", $output));
         }
-        if(File::exists($output) && !$this->hasOption('force')){
+        if (File::exists($output) && !$this->hasOption('force')) {
             $this->error('Output file already exists');
             $this->info('Use --force to overwrite');
             return;
         }
 
         /**
-         * check filename is an image using File facade
+         * check imageName is an image using File facade
          */
-        if(!str_starts_with(File::mimeType($filename), 'image/')){
+        if (!str_starts_with(File::mimeType($imageName), 'image/')) {
             $this->error('File is not an image');
             return;
         }
 
-        $this->task('generating thumbnail', function () use ($filename, $width, $output) {
-            try {
-                $outputBlob = ImageUtils::getImageThumbnail($filename, $width);
-                File::put($output, $outputBlob);
+        try {
+            $outputBlob = ImageUtils::getImageThumbnail($imageName, $width);
+            File::put($output, $outputBlob);
+            if (!$this->option('quiet')) {
                 $this->info('Thumbnail generated in ' . $output);
-                return true;
-            } catch (ImageUtilsException $e) {
-                $this->error($e->getMessage());
-                return false;
             }
-        });
+        } catch (ImageUtilsException $e) {
+            $this->error($e->getMessage());
+            return false;
+        }
 
     }
 
     /**
      * Define the command's schedule.
      *
-     * @param  \Illuminate\Console\Scheduling\Schedule  $schedule
+     * @param Schedule $schedule
      * @return void
      */
     public function schedule(Schedule $schedule): void

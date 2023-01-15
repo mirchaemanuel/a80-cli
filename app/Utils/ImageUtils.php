@@ -3,11 +3,13 @@
 namespace App\Utils;
 
 use App\Exceptions\ImageUtilsException;
+use http\Encoding\Stream\Debrotli;
 use Imagick;
 use ImagickException;
 
 abstract class ImageUtils
 {
+    public const THUMB_PREFIX_NAME = 'thumb_';
 
     /**
      * Generate image thumbnail
@@ -22,7 +24,11 @@ abstract class ImageUtils
         try {
             $imagick = new Imagick($fileName);
             $imagick->thumbnailImage($width, $width, true, false);
-            return $imagick->getImageBlob();
+            $imageBlob = $imagick->getImageBlob();
+            if(!$imageBlob) {
+                throw new ImageUtilsException('Unable to generate thumbnail for ' . $fileName);
+            }
+            return $imageBlob;
         } catch (ImagickException $e) {
             throw new ImageUtilsException('Imagick error: ' . $e->getMessage());
         }
