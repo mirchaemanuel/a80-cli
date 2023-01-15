@@ -22,7 +22,11 @@ abstract class ImageUtils
         try {
             $imagick = new Imagick($fileName);
             $imagick->thumbnailImage($width, $width, true, false);
-            return $imagick->getImageBlob();
+            $imageBlob = $imagick->getImageBlob();
+            if(!$imageBlob) {
+                throw new ImageUtilsException('Unable to generate thumbnail for ' . $fileName);
+            }
+            return $imageBlob;
         } catch (ImagickException $e) {
             throw new ImageUtilsException('Imagick error: ' . $e->getMessage());
         }

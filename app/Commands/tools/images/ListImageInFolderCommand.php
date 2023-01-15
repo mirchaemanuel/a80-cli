@@ -7,8 +7,17 @@ use Illuminate\Support\Facades\File;
 use LaravelZero\Framework\Commands\Command;
 use function Termwind\{render};
 
+
+/**
+ * ListImageInFolderCommand
+ *
+ * List all image file in a folder along with their size and info
+ *
+ * @todo add pipe command to thumbnail all images in a folder
+ */
 class ListImageInFolderCommand extends Command
 {
+    private const THUMB_PREFIX_NAME = 'thumb_';
     /**
      * The signature of the command.
      *
@@ -16,7 +25,9 @@ class ListImageInFolderCommand extends Command
      */
     protected $signature = 'tools:image:list {folder}
                             {--r|recursive : List image in subfolder.}
-                            {--o|output= : Output to a CSV file.}';
+                            {--o|output= : Output to a CSV file.}
+                            {--gen-thumbnail : Generate thumbnail for all images.}
+                            {--w|width= : Width of thumbnail}';
 
     /**
      * The description of the command.
@@ -107,6 +118,32 @@ class ListImageInFolderCommand extends Command
         render(view('image-list', [
             'imagePaths' => $imagePaths,
         ]));
+
+        /**
+         * Generate thumbnails
+         */
+        if ($this->option('gen-thumbnail')) {
+            $this->info('Generating thumbnail...');
+            $this->info(sprintf("- if image name starts with \"%s\" it will be skipped", self::THUMB_PREFIX_NAME));
+            $width = $this->option('width');
+            if (!$width) {
+                $width = 300;
+            }
+            $this->withProgressBar(array_merge(...array_values($imagePaths)), function ($image) use ($width) {
+                //if filename start with thumbnail_ then skip
+                if (str_starts_WITH($image['filename'], self::THUMB_PREFIX_NAME)) {
+                    return;
+                }
+                $this->call('tools:image:thumb', [
+                    'filename'         => $image['path'],
+                    'output'           => File::dirname($image['path']) . '/' . self::THUMB_PREFIX_NAME . $image['filename'],
+                    '--width'          => $width,
+                    '--quiet'          => true,
+                    '-q'               => true,
+                    '--no-interaction' => true,
+                ]);
+            });
+        }
     }
 
     /**

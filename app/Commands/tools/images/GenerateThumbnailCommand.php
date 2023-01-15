@@ -16,7 +16,7 @@ class GenerateThumbnailCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'tools:image:thumbnail
+    protected $signature = 'tools:image:thumb
                             {filename : filename of the image}
                             {output : output filename}
                             {--w|width= : width of the thumbnail}
@@ -53,18 +53,18 @@ class GenerateThumbnailCommand extends Command
 
         //get width and height
         $width = $this->option('width');
-        if(!$width) {
+        if (!$width) {
             $this->warn('Width not specified, using default value of 300');
             $width = 300;
         }
 
         //get output filename
         $output = $this->argument('output');
-        if(!$output){
+        if (!$output) {
             $this->error('Output filename is required');
             return;
         }
-        if(File::exists($output) && !$this->hasOption('force')){
+        if (File::exists($output) && !$this->hasOption('force')) {
             $this->error('Output file already exists');
             $this->info('Use --force to overwrite');
             return;
@@ -73,29 +73,28 @@ class GenerateThumbnailCommand extends Command
         /**
          * check filename is an image using File facade
          */
-        if(!str_starts_with(File::mimeType($filename), 'image/')){
+        if (!str_starts_with(File::mimeType($filename), 'image/')) {
             $this->error('File is not an image');
             return;
         }
 
-        $this->task('generating thumbnail', function () use ($filename, $width, $output) {
-            try {
-                $outputBlob = ImageUtils::getImageThumbnail($filename, $width);
-                File::put($output, $outputBlob);
+        try {
+            $outputBlob = ImageUtils::getImageThumbnail($filename, $width);
+            File::put($output, $outputBlob);
+            if (!$this->option('quiet')) {
                 $this->info('Thumbnail generated in ' . $output);
-                return true;
-            } catch (ImageUtilsException $e) {
-                $this->error($e->getMessage());
-                return false;
             }
-        });
+        } catch (ImageUtilsException $e) {
+            $this->error($e->getMessage());
+            return false;
+        }
 
     }
 
     /**
      * Define the command's schedule.
      *
-     * @param  \Illuminate\Console\Scheduling\Schedule  $schedule
+     * @param Schedule $schedule
      * @return void
      */
     public function schedule(Schedule $schedule): void
