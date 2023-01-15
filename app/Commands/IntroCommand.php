@@ -30,6 +30,9 @@ class IntroCommand extends Command
     public function handle()
     {
         $version = config('app.version');
+
+        // @todo use VERSION.yml to retrieve version and release notes
+
         render(<<<HTML
         <div class="ml-2 mt-1">
             <div class="font-bold underline">
@@ -65,7 +68,7 @@ class IntroCommand extends Command
                             <td>2023-01-14</td>
                             <td>
                                 <ul>
-                                    <li>tools:image:thumbnail</li>
+                                    <li>tools:image:thumb</li>
                                 </ul>
                             </td>
                         </tr>
@@ -78,17 +81,27 @@ class IntroCommand extends Command
                                 </ul>
                             </td>
                         </tr>
+                        <tr>
+                            <td>0.1.5</td>
+                            <td>2023-01-14</td>
+                            <td>
+                                <ul>
+                                    <li>tools:image:list improved with thumbnail generation and report</li>
+                                </ul>
+                            </td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
         </div>
-        HTML);
+        HTML
+        );
     }
 
     /**
      * Define the command's schedule.
      *
-     * @param  \Illuminate\Console\Scheduling\Schedule  $schedule
+     * @param Schedule $schedule
      * @return void
      */
     public function schedule(Schedule $schedule): void
