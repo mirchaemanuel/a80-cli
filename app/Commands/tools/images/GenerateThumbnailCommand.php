@@ -17,8 +17,8 @@ class GenerateThumbnailCommand extends Command
      * @var string
      */
     protected $signature = 'tools:image:thumb
-                            {filename : filename of the image}
-                            {output : output filename}
+                            {imageName : path of the image}
+                            {output? : output filename. If omitted will be saved in the same folder with prefix "thumb_"}
                             {--w|width= : width of the thumbnail}
                             {--f|force= : overwrite existing file}';
 
@@ -45,8 +45,8 @@ class GenerateThumbnailCommand extends Command
         }
 
         //check if file exists
-        $filename = $this->argument('filename');
-        if (!File::exists($filename)) {
+        $imageName = $this->argument('imageName');
+        if (!File::exists($imageName)) {
             $this->error('File not found');
             return;
         }
@@ -58,11 +58,11 @@ class GenerateThumbnailCommand extends Command
             $width = 300;
         }
 
-        //get output filename
+        //get output imageName
         $output = $this->argument('output');
         if (!$output) {
-            $this->error('Output filename is required');
-            return;
+            $output = File::dirname($imageName) . '/' . ImageUtils::THUMB_PREFIX_NAME . File::basename($imageName);
+            $this->warn(sprintf("No output imageName specified. %s will be used", $output));
         }
         if (File::exists($output) && !$this->hasOption('force')) {
             $this->error('Output file already exists');
@@ -71,15 +71,15 @@ class GenerateThumbnailCommand extends Command
         }
 
         /**
-         * check filename is an image using File facade
+         * check imageName is an image using File facade
          */
-        if (!str_starts_with(File::mimeType($filename), 'image/')) {
+        if (!str_starts_with(File::mimeType($imageName), 'image/')) {
             $this->error('File is not an image');
             return;
         }
 
         try {
-            $outputBlob = ImageUtils::getImageThumbnail($filename, $width);
+            $outputBlob = ImageUtils::getImageThumbnail($imageName, $width);
             File::put($output, $outputBlob);
             if (!$this->option('quiet')) {
                 $this->info('Thumbnail generated in ' . $output);

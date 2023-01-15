@@ -3,11 +3,13 @@
 namespace App\Utils;
 
 use App\Exceptions\ImageUtilsException;
+use http\Encoding\Stream\Debrotli;
 use Imagick;
 use ImagickException;
 
 abstract class ImageUtils
 {
+    public const THUMB_PREFIX_NAME = 'thumb_';
 
     /**
      * Generate image thumbnail

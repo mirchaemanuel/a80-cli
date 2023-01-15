@@ -2,6 +2,7 @@
 
 namespace App\Commands\tools\images;
 
+use App\Utils\ImageUtils;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Support\Facades\File;
 use LaravelZero\Framework\Commands\Command;
@@ -17,7 +18,6 @@ use function Termwind\{render};
  */
 class ListImageInFolderCommand extends Command
 {
-    private const THUMB_PREFIX_NAME = 'thumb_';
     /**
      * The signature of the command.
      *
@@ -124,19 +124,19 @@ class ListImageInFolderCommand extends Command
          */
         if ($this->option('gen-thumbnail')) {
             $this->info('Generating thumbnail...');
-            $this->info(sprintf("- if image name starts with \"%s\" it will be skipped", self::THUMB_PREFIX_NAME));
+            $this->info(sprintf("- if image name starts with \"%s\" it will be skipped", ImageUtils::THUMB_PREFIX_NAME));
             $width = $this->option('width');
             if (!$width) {
                 $width = 300;
             }
             $this->withProgressBar(array_merge(...array_values($imagePaths)), function ($image) use ($width) {
                 //if filename start with thumbnail_ then skip
-                if (str_starts_WITH($image['filename'], self::THUMB_PREFIX_NAME)) {
+                if (str_starts_with($image['filename'], ImageUtils::THUMB_PREFIX_NAME)) {
                     return;
                 }
                 $this->call('tools:image:thumb', [
                     'filename'         => $image['path'],
-                    'output'           => File::dirname($image['path']) . '/' . self::THUMB_PREFIX_NAME . $image['filename'],
+                    'output'           => File::dirname($image['path']) . '/' . ImageUtils::THUMB_PREFIX_NAME . $image['filename'],
                     '--width'          => $width,
                     '--quiet'          => true,
                     '-q'               => true,
