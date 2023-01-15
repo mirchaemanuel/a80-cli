@@ -1,0 +1,19 @@
+versions:
+  - 0.1:
+      - date: 2023-01-14
+      - notes: |
+          * Initial release
+          * OpenAI client library
+          * ai:query
+  - 0.1.3:
+      - date: 2023-01-14
+      - notes: |
+          * tools:image:thumb
+  - 0.1.4:
+      - date: 2023-01-14
+      - notes: |
+          * tools:image:list
+  - 0.1.5:
+        - date: 2023-01-14
+        - notes: |
+            * tools:image:list improved with thumbnail generation and report
