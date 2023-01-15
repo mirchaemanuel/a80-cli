@@ -78,16 +78,18 @@ class GenerateThumbnailCommand extends Command
             return;
         }
 
-        $originalImage = $filename;
+        $this->task('generating thumbnail', function () use ($filename, $width, $output) {
+            try {
+                $outputBlob = ImageUtils::getImageThumbnail($filename, $width);
+                File::put($output, $outputBlob);
+                $this->info('Thumbnail generated in ' . $output);
+                return true;
+            } catch (ImageUtilsException $e) {
+                $this->error($e->getMessage());
+                return false;
+            }
+        });
 
-        try {
-            $outputBlob = ImageUtils::getImageThumbnail($originalImage, $width);
-            File::put($output, $outputBlob);
-            $this->info('Thumbnail generated in ' . $output);
-        } catch (ImageUtilsException $e) {
-            $this->error( $e->getMessage());
-            return;
-        }
     }
 
     /**
