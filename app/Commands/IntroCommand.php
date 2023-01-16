@@ -90,6 +90,16 @@ class IntroCommand extends Command
                                 </ul>
                             </td>
                         </tr>
+                        <tr>
+                            <td>0.1.6</td>
+                            <td>2023-01-14</td>
+                            <td>
+                                <ul>
+                                    <li>OpenAIService</li>
+                                    <li>ai:title-abstract: generate title and abstract of text file</li>
+                                </ul>
+                            </td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
