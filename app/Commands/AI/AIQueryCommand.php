@@ -2,13 +2,18 @@
 
 namespace App\Commands\AI;
 
+use App\Exceptions\MissingDotEnvFileException;
+use App\Exceptions\MissingOpenAIKeyException;
+use App\Services\AI\OpenAIService;
+use App\Traits\OpenAICommand;
 use App\Utils\CheckDotEnv;
 use Illuminate\Console\Scheduling\Schedule;
 use LaravelZero\Framework\Commands\Command;
 use OpenAI;
 
-class Query extends Command
+class AIQueryCommand extends Command
 {
+    use OpenAICommand;
     /**
      * The signature of the command.
      *
@@ -30,25 +35,9 @@ class Query extends Command
      *
      * @return mixed
      */
-    public function handle()
+    public function handle(OpenAIService $openAIService)
     {
-        //check if .env file exists, otherwise create it
-        if (CheckDotEnv::exists() === false) {
-            $this->error('.env file is not present');
-            $this->info('I\'m creating a .env file for you');
-            CheckDotEnv::create();
-            $this->info('Please edit the `.env` file and add your OpenAI API key');
-            $this->info('You can get your API key from https://beta.openai.com/account/api-keys');
-            return;
-        }
-
-        //check .env file
-        $openaiKey = config('ai.openai.api_key');
-        if (empty($openaiKey)) {
-            $this->error('OpenAI API key is not present in .env file');
-            $this->info('Create a .env file in the same directory of a80 and add the following line:');
-            $this->info('OPENAI_API_KEY=your_api_key');
-            $this->info('You can get your API key from https://beta.openai.com/account/api-keys');
+        if (!$this->checkOpenAI($openAIService)) {
             return;
         }
 
@@ -71,13 +60,7 @@ class Query extends Command
 
         //***** QUERY *****
 
-        $openai = OpenAI::client($openaiKey);
-        $response = $openai->completions()->create([
-            'model' => 'text-davinci-003',
-            'prompt' => $question,
-            'max_tokens' => $maxTokens,
-            'temperature' => 0.9,
-        ]);
+        $response = $openAIService->prompt($question, $maxTokens);
 
         //***** OUTPUT *****
 
