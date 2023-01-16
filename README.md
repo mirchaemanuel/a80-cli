@@ -27,7 +27,9 @@ I had the opportunity to experiment with different aspects of this fantastic pro
 
 ## OpenAI
 
-Currently there is only one command that allows you to ask questions to OpenAI:
+Currently there is some command to interact with OpenAI
+- ai:query => allow the user to ask question to OpenAI
+- ai:title-abstract => generate a SEO title and an abstract from a text file (plain text only)
 
 ```
 ./a80 ai:query --help
@@ -43,6 +45,21 @@ Arguments:
 
 Options:
   -m, --max-tokens[=MAX-TOKENS]  [1-4000] default is 2000
+  
+./a80 ai:title-abstract --help                                                                             ─╯
+Description:
+  Generate a title and description from a text file
+
+Usage:
+  ai:title-abstract [options] [--] <filename>
+
+Arguments:
+  filename                       file to read
+
+Options:
+  -m, --max-tokens[=MAX-TOKENS]  [1-4000] default is 2000
+      --model[=MODEL]            [davinci, ada, babbage, curie, content-filter-alpha-c4] default is davinci
+
 ```
 
 ## Requirements
