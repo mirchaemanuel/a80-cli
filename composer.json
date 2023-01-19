@@ -28,7 +28,8 @@
         "laminas/laminas-text": "^2.9",
         "laravel-zero/framework": "^9.2",
         "nunomaduro/termwind": "^1.14",
-        "openai-php/client": "^0.3.0"
+        "openai-php/client": "^0.3.0",
+        "ext-yaml": "*"
     },
     "require-dev": {
         "laravel/pint": "^1.2",
