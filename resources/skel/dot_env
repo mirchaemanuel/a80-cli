@@ -1,0 +1,4 @@
+#A80-cli .env file
+
+# OpenAI
+OPENAI_API_KEY=your_api_key

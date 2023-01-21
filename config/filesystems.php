@@ -2,10 +2,22 @@
 
 return [
     'default' => 'local',
-    'disks' => [
+    'disks'   => [
         'local' => [
             'driver' => 'local',
-            'root' => getcwd(),
+            'root'   => getcwd(),
+        ],
+        'app'   => [
+            'driver' => 'local',
+            'root'   => $_SERVER['HOME'] . '/.a80_cli/',
+        ],
+        'root'  => [
+            'driver' => 'local',
+            'root'   => $_SERVER['HOME'],
+        ],
+        'internal' => [//phar and local
+            'driver' => 'local',
+            'root'   => base_path(),
         ],
     ],
 ];

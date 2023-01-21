@@ -2,6 +2,7 @@
 
 namespace App\Utils;
 
+use Exception;
 use Illuminate\Support\Facades\Storage;
 
 class CheckDotEnv
@@ -21,7 +22,7 @@ class CheckDotEnv
      * Create a .env file
      *
      * @return void
-     * @throws \Exception if .env is not writable
+     * @throws Exception if .env is not writable
      */
     public static function create(): void
     {
@@ -31,15 +32,11 @@ class CheckDotEnv
         }
 
         try {
-            //skelton .env file
-            $envSkel = <<<TXT
-# OpenAI
-OPENAI_API_KEY=your_api_key
-TXT;
-            Storage::put('.env', $envSkel);
-        } catch (\Exception $ex) {
+            //skeleton .env file
+            Storage::disk('local')->put('.env', Storage::disk('internal')->get('resources/skel/dot_env'));
+        } catch (Exception $ex) {
             echo $ex->getMessage() . "\n";
-            throw new \Exception('Unable to create .env file');
+            throw new Exception('Unable to create .env file');
         }
     }
 }

@@ -2,18 +2,15 @@
 
 namespace App\Commands\AI;
 
-use App\Exceptions\MissingDotEnvFileException;
-use App\Exceptions\MissingOpenAIKeyException;
 use App\Services\AI\OpenAIService;
 use App\Traits\OpenAICommand;
-use App\Utils\CheckDotEnv;
 use Illuminate\Console\Scheduling\Schedule;
 use LaravelZero\Framework\Commands\Command;
-use OpenAI;
 
 class AIQueryCommand extends Command
 {
     use OpenAICommand;
+
     /**
      * The signature of the command.
      *
@@ -45,16 +42,16 @@ class AIQueryCommand extends Command
 
         //max tokens
         $maxTokens = (int)$this->option('max-tokens');
-        if(!$maxTokens){
+        if (!$maxTokens) {
             $maxTokens = 2000;
-        }elseif($maxTokens < 1 || $maxTokens > 4000){
+        } elseif ($maxTokens < 1 || $maxTokens > 4000) {
             $this->error('max-tokens must be between 1 and 4000');
             return;
         }
 
         //question
         $question = $this->argument('question');
-        if(!$question){
+        if (!$question) {
             $question = $this->ask('What\'s your question?');
         }
 
@@ -65,7 +62,7 @@ class AIQueryCommand extends Command
         //***** OUTPUT *****
 
         //check output exists
-        if(!isset($response['choices'][0]['text'])){
+        if (!isset($response['choices'][0]['text'])) {
             $this->error('No answer found');
             return;
         }
@@ -76,7 +73,7 @@ class AIQueryCommand extends Command
     /**
      * Define the command's schedule.
      *
-     * @param  \Illuminate\Console\Scheduling\Schedule  $schedule
+     * @param Schedule $schedule
      * @return void
      */
     public function schedule(Schedule $schedule): void

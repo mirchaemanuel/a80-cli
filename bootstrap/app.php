@@ -11,6 +11,8 @@
 |
 */
 
+use Illuminate\Support\Facades\Storage;
+
 $app = new LaravelZero\Framework\Application(
     dirname(__DIR__)
 );
