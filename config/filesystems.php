@@ -14,6 +14,10 @@ return [
         'root'  => [
             'driver' => 'local',
             'root'   => $_SERVER['HOME'],
-        ]
+        ],
+        'internal' => [//phar and local
+            'driver' => 'local',
+            'root'   => base_path(),
+        ],
     ],
 ];

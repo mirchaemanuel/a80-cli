@@ -16,15 +16,20 @@ versions:
    - release: "0.1.5"
      date: 2023-01-14
      notes:
-          - tools:image:list improved with thumbnail generation and report
+          - |
+            tools:image:list improved with thumbnail generation and report
    - release: "0.1.6"
      date: 2023-01-15
      notes:
           - OpenAIService
           - ai:title:abstract generate title and abstract of text file
    - release: "0.1.7"
-     date: 2023-01-19
+     date: 2023-01-20
      notes:
           - added VERSION.yml
           - introduced Storage disk 'app' for local storage of preferences, data and cache
+          - |
+            added two new commands: check and env:create
+          - added database support for local storage
+          - created settings table
 

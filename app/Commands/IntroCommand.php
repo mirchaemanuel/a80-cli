@@ -35,7 +35,7 @@ class IntroCommand extends Command
             $versionYml = ['versions' => []];
         } else {
             //read file VERSION.yml if exists
-            $versionYml = yaml_parse(Storage::disk('local')->get('resources/docs/VERSION.yml'));
+            $versionYml = yaml_parse(Storage::disk('internal')->get('resources/docs/VERSION.yml'));
         }
 
         render(view('intro', [
