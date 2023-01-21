@@ -32,11 +32,7 @@ class CheckDotEnv
 
         try {
             //skelton .env file
-            $envSkel = <<<TXT
-# OpenAI
-OPENAI_API_KEY=your_api_key
-TXT;
-            Storage::put('.env', $envSkel);
+            Storage::disk('local')->copy('resources/skel/dot_env', '.env');
         } catch (\Exception $ex) {
             echo $ex->getMessage() . "\n";
             throw new \Exception('Unable to create .env file');
