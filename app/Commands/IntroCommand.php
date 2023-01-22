@@ -31,7 +31,7 @@ class IntroCommand extends Command
     public function handle()
     {
         if (!function_exists('yaml_parse')) {
-            $this->warning('YAML extension is not installed. Please install it to enable all functionalities');
+            $this->warn('YAML extension is not installed. Please install it to enable all functionalities');
             $versionYml = ['versions' => []];
         } else {
             //read file VERSION.yml if exists
