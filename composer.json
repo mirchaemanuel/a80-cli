@@ -25,6 +25,7 @@
         "php": "^8.1",
         "ext-imagick": "*",
         "ext-yaml": "*",
+        "a80/laravel-zero-sitemap": "@dev",
         "illuminate/database": "^9.0",
         "illuminate/view": "^9.0",
         "laminas/laminas-text": "^2.9",
@@ -38,6 +39,12 @@
         "mockery/mockery": "^1.4.4",
         "pestphp/pest": "^1.21.3"
     },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../laravel-zero-sitemap"
+        }
+    ],
     "autoload": {
         "psr-4": {
             "App\\": "app/",
