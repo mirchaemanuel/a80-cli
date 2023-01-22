@@ -1,15 +1,17 @@
 <?php
 
-namespace App\Utils;
+namespace App\Services\Images\Concretes;
 
 use App\Exceptions\ImageUtilsException;
-use http\Encoding\Stream\Debrotli;
+use App\Services\Images\ImageService;
+use Illuminate\Support\Facades\File;
 use Imagick;
-use ImagickException;
+use ImagickException as ImagickExceptionAlias;
+use JetBrains\PhpStorm\ArrayShape;
+use JetBrains\PhpStorm\Pure;
 
-abstract class ImageUtils
+class ImageServiceImagick implements ImageService
 {
-    public const THUMB_PREFIX_NAME = 'thumb_';
 
     /**
      * Generate image thumbnail
@@ -19,7 +21,7 @@ abstract class ImageUtils
      * @return string
      * @throws ImageUtilsException
      */
-    public static function getImageThumbnail(string $fileName, int $width): string
+    public  function getThumbnail(string $fileName, int $width, string $output)
     {
         try {
             $imagick = new Imagick($fileName);
@@ -28,22 +30,22 @@ abstract class ImageUtils
             if(!$imageBlob) {
                 throw new ImageUtilsException('Unable to generate thumbnail for ' . $fileName);
             }
-            return $imageBlob;
-        } catch (ImagickException $e) {
+
+            File::put($output, $imageBlob);
+        } catch (ImagickExceptionAlias $e) {
             throw new ImageUtilsException('Imagick error: ' . $e->getMessage());
         }
     }
 
     #[ArrayShape(["x" => "float", "y" => "float"])]
     #[Pure]
-    public static function getImageResolution(string $fileName) : array
+    public  function getImageResolution(string $fileName) : array
     {
         try {
             $imagick = new Imagick($fileName);
             return $imagick->getImageResolution();
-        } catch (ImagickException $e) {
+        } catch (ImagickExceptionAlias $e) {
             throw new ImageUtilsException('Imagick error: ' . $e->getMessage());
         }
     }
-
 }

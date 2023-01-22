@@ -32,4 +32,11 @@ versions:
             added two new commands: check and env:create
           - added database support for local storage
           - created settings table
+   - release: "0.1.8"
+     date: 2023-01-23
+     notes:
+       - |
+         added ServiceProvider: AIServiceProvider and ImageServiceProvider
+       - added GD failover for image processing when Imagick is not available
+
 

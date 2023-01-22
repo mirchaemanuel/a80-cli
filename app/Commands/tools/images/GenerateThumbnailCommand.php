@@ -3,6 +3,7 @@
 namespace App\Commands\tools\images;
 
 use App\Exceptions\ImageUtilsException;
+use App\Services\Images\ImageService;
 use App\Utils\ImageUtils;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Support\Facades\File;
@@ -34,12 +35,11 @@ class GenerateThumbnailCommand extends Command
      *
      * @return mixed
      */
-    public function handle()
+    public function handle(ImageService $imageService)
     {
-        //check if imagick is installed
-        if (!extension_loaded('imagick')) {
-            $this->error('Imagick extension is not installed');
-            $this->info('Please install Imagick extension');
+        if ($imageService === null) {
+            $this->error('please install GD extension or Imagick extension');
+            $this->info('https://www.php.net/manual/en/image.installation.php');
             $this->info('https://www.php.net/manual/en/imagick.installation.php');
             return;
         }
@@ -79,8 +79,7 @@ class GenerateThumbnailCommand extends Command
         }
 
         try {
-            $outputBlob = ImageUtils::getImageThumbnail($imageName, $width);
-            File::put($output, $outputBlob);
+            $outputBlob = $imageService->getThumbnail($imageName, $width, $output);
             if (!$this->option('quiet')) {
                 $this->info('Thumbnail generated in ' . $output);
             }
