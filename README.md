@@ -64,7 +64,26 @@ Options:
 
 ## Requirements
 
-PHP 8.1+
+- PHP 8.1+
+- Imagick or GD extension for image processing
+- SQLite extension for database
+- Yaml parser (suggested)
+
+### Check requirements
+
+You can execute a command to check requirement:
+
+```
+./a80 check
+
+Checking system preconditions and requirements...
+ - creating app settings path: /home/user/.a80_cli/: ✔
+ - .env file: ✔
+ - yaml extension: ✔
+ - imagick extension: ✔
+ - GD extension: ✔
+ - sqlite extension: ✔
+```
 
 ## Usage
 
