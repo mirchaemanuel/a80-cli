@@ -54,6 +54,11 @@ class CheckCommand extends Command
             return extension_loaded('imagick');
         });
 
+        //check GD extension
+        $this->task(' - GD extension', function () {
+            return extension_loaded('gd');
+        });
+
         //check sqlite extension
         $this->task(' - sqlite extension', function () {
             return extension_loaded('sqlite3');
