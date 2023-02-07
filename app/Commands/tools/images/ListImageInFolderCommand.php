@@ -3,7 +3,6 @@
 namespace App\Commands\tools\images;
 
 use App\Services\Images\ImageService;
-use App\Utils\ImageUtils;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Support\Facades\File;
 use LaravelZero\Framework\Commands\Command;
