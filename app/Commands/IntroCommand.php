@@ -30,16 +30,14 @@ class IntroCommand extends Command
      */
     public function handle()
     {
-        if (!function_exists('yaml_parse')) {
-            $this->warn('YAML extension is not installed. Please install it to enable all functionalities');
-            $versionYml = ['versions' => []];
-        } else {
-            //read file VERSION.yml if exists
-            $versionYml = yaml_parse(Storage::disk('internal')->get('resources/docs/VERSION.yml'));
+        try {
+            $versionJson = json_decode(Storage::disk('internal')->get('resources/docs/VERSION.json'), true, 512, JSON_THROW_ON_ERROR);
+        } catch (\JsonException $e) {
+            $this->warn('Error parsing VERSION.json');
         }
 
         render(view('intro', [
-            'releases' => $versionYml['versions'],
+            'releases' => $versionJson['versions'],
         ]));
 
     }
