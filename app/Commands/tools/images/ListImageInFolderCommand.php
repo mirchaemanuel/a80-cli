@@ -2,6 +2,7 @@
 
 namespace App\Commands\tools\images;
 
+use App\Services\Images\ImageService;
 use App\Utils\ImageUtils;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Support\Facades\File;
@@ -41,7 +42,7 @@ class ListImageInFolderCommand extends Command
      *
      * @return mixed
      */
-    public function handle()
+    public function handle(): void
     {
 
         /**
@@ -69,7 +70,7 @@ class ListImageInFolderCommand extends Command
         foreach ($files as $file) {
             $mimeType = File::mimeType($file);
             if (str_contains($mimeType, 'image')) {
-                $imagePaths[$file->getPathInfo()->getRealPath()][] = [
+                $imagePaths[$file->getPathInfo()?->getRealPath()][] = [
                     'path'      => $file->getRealPath(),
                     'filename'  => $file->getFilename(),
                     'size'      => File::size($file),
@@ -81,6 +82,9 @@ class ListImageInFolderCommand extends Command
 
         if (empty($imagePaths)) {
             $this->warn('No image found');
+            if (!$this->option('recursive')) {
+                $this->warn('Try with --recursive option to search in subfolders');
+            }
             return;
         }
 
@@ -124,19 +128,19 @@ class ListImageInFolderCommand extends Command
          */
         if ($this->option('gen-thumbnail')) {
             $this->info('Generating thumbnail...');
-            $this->info(sprintf("- if image name starts with \"%s\" it will be skipped", ImageUtils::THUMB_PREFIX_NAME));
+            $this->info(sprintf("- if image name starts with \"%s\" it will be skipped", ImageService::THUMB_PREFIX_NAME));
             $width = $this->option('width');
             if (!$width) {
                 $width = 300;
             }
             $this->withProgressBar(array_merge(...array_values($imagePaths)), function ($image) use ($width) {
                 //if filename start with thumbnail_ then skip
-                if (str_starts_with($image['filename'], ImageUtils::THUMB_PREFIX_NAME)) {
+                if (str_starts_with($image['filename'], ImageService::THUMB_PREFIX_NAME)) {
                     return;
                 }
                 $this->call('tools:image:thumb', [
-                    'imageName'         => $image['path'],
-                    'output'           => File::dirname($image['path']) . '/' . ImageUtils::THUMB_PREFIX_NAME . $image['filename'],
+                    'imageName'        => $image['path'],
+                    'output'           => File::dirname($image['path']) . '/' . ImageService::THUMB_PREFIX_NAME . $image['filename'],
                     '--width'          => $width,
                     '--quiet'          => true,
                     '-q'               => true,
