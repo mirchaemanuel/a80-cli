@@ -1,6 +1,6 @@
 <div class="mx-2 my-1">
     <div class="font-bold underline">
-        A80-cli version {$version}
+        A80-cli version {{$version}}
     </div>
     <div class="mb-1">
         Mircha Emanuel D'Angelo | https://a80.it

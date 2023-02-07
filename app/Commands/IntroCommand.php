@@ -38,6 +38,7 @@ class IntroCommand extends Command
 
         render(view('intro', [
             'releases' => $versionJson['versions'],
+            'version' => $versionJson['versions'][count($versionJson['versions']) - 1]['release']
         ]));
 
     }
