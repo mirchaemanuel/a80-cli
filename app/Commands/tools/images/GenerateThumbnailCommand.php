@@ -4,7 +4,6 @@ namespace App\Commands\tools\images;
 
 use App\Exceptions\ImageUtilsException;
 use App\Services\Images\ImageService;
-use App\Utils\ImageUtils;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Storage;
@@ -35,7 +34,7 @@ class GenerateThumbnailCommand extends Command
      *
      * @return mixed
      */
-    public function handle(ImageService $imageService)
+    public function handle(ImageService $imageService): void
     {
         if ($imageService === null) {
             $this->error('please install GD extension or Imagick extension');
@@ -61,7 +60,7 @@ class GenerateThumbnailCommand extends Command
         //get output imageName
         $output = $this->argument('output');
         if (!$output) {
-            $output = File::dirname($imageName) . '/' . ImageUtils::THUMB_PREFIX_NAME . File::basename($imageName);
+            $output = File::dirname($imageName) . '/' . ImageService::THUMB_PREFIX_NAME . File::basename($imageName);
             $this->warn(sprintf("No output imageName specified. %s will be used", $output));
         }
         if (File::exists($output) && !$this->hasOption('force')) {
@@ -85,7 +84,7 @@ class GenerateThumbnailCommand extends Command
             }
         } catch (ImageUtilsException $e) {
             $this->error($e->getMessage());
-            return false;
+            return;
         }
 
     }
