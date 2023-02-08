@@ -85,6 +85,14 @@ Checking system preconditions and requirements...
  - sqlite extension: ✔
 ```
 
+### If you don't meet the requirements
+
+If your development environment doesn't meet the requirements, you can use my Docker-based environment:
+
+https://github.com/mirchaemanuel/ryuudev
+
+Contains everything needed to develop and run `a80-cli`.
+
 ## Usage
 
 ### Installing composer dependencies
