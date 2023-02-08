@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Commands\Tools;
+namespace App\Commands\tools;
 
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Support\Facades\File;
@@ -20,7 +20,7 @@ class Yaml2JsonCommand extends Command
      *
      * @var string
      */
-    protected $description = 'Convert yaml file to json. The Json file will be printed to the console';
+    protected $description = 'Convert YAML file to JSON. The JSON file will be printed to the console';
 
     /**
      * Execute the console command.
