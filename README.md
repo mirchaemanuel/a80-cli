@@ -117,3 +117,99 @@ php a80 app:build
 
 It will create a phar executable archive in `/builds`
 
+# Release History
+
+<table>
+    <thead>
+    <tr>
+        <th>Release</th>
+        <th>Date</th>
+        <th>Notes</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>0.1</td>
+        <td>2023-01-14</td>
+        <td>
+            <ul>
+                <li>Initial release</li>
+                <li>OpenAI client library</li>
+                <li>ai:query</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>0.1.3</td>
+        <td>2023-01-14</td>
+        <td>
+            <ul>
+                <li>tools:image:thumb</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>0.1.4</td>
+        <td>2023-01-14</td>
+        <td>
+            <ul>
+                <li>tools:image:list</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>0.1.5</td>
+        <td>2023-01-14</td>
+        <td>
+            <ul>
+                <li>tools:image:list improved with thumbnail generation and report</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>0.1.6</td>
+        <td>2023-01-15</td>
+        <td>
+            <ul>
+                <li>OpenAIService</li>
+                <li>ai:title:abstract generate title and abstract of text file</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>0.1.7</td>
+        <td>2023-01-20</td>
+        <td>
+            <ul>
+                <li>added VERSION.yml</li>
+                <li>introduced Storage disk &#039;app&#039; for local storage of preferences, data and cache</li>
+                <li>added two new commands: check and env:create</li>
+                <li>added database support for local storage</li>
+                <li>created settings table</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>0.1.8</td>
+        <td>2023-01-23</td>
+        <td>
+            <ul>
+                <li>added ServiceProvider: AIServiceProvider and ImageServiceProvider</li>
+                <li>added GD failover for image processing when Imagick is not available</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>0.1.9</td>
+        <td>2023-02-07</td>
+        <td>
+            <ul>
+                <li>fixed ImageUtils reference error</li>
+                <li>added some useful warning to tools:image:list command</li>
+                <li>converted VERSION.yml to JSON format for better compatibility</li>
+                <li>added new commands: tools:yaml2json and tools:json2yaml</li>
+            </ul>
+        </td>
+    </tr>
+    </tbody>
+</table>

@@ -32,14 +32,14 @@ class IntroCommand extends Command
     {
         try {
             $versionJson = json_decode(Storage::disk('internal')->get('resources/docs/VERSION.json'), true, 512, JSON_THROW_ON_ERROR);
+            render(view('intro', [
+                'releases' => $versionJson['versions'],
+                'version' => $versionJson['versions'][count($versionJson['versions']) - 1]['release']
+            ]));
         } catch (\JsonException $e) {
             $this->warn('Error parsing VERSION.json');
         }
 
-        render(view('intro', [
-            'releases' => $versionJson['versions'],
-            'version' => $versionJson['versions'][count($versionJson['versions']) - 1]['release']
-        ]));
 
     }
 

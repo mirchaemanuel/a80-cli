@@ -36,5 +36,4 @@
         </div>
     @endif
     <hr>
-</div
-
+</div>
