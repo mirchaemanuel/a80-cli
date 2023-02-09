@@ -3,10 +3,12 @@
 namespace App\Commands\tools\images;
 
 use App\Exceptions\ImageUtilsException;
+use App\Services\Images\Concretes\ImageServiceConcrete;
 use App\Services\Images\ImageService;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Storage;
+use Intervention\Image\Exception\ImageException;
 use LaravelZero\Framework\Commands\Command;
 
 class GenerateThumbnailCommand extends Command
@@ -60,7 +62,7 @@ class GenerateThumbnailCommand extends Command
         //get output imageName
         $output = $this->argument('output');
         if (!$output) {
-            $output = File::dirname($imageName) . '/' . ImageService::THUMB_PREFIX_NAME . File::basename($imageName);
+            $output = $imageService->generateThumbnailPath(File::dirname($imageName), File::basename($imageName));
             $this->warn(sprintf("No output imageName specified. %s will be used", $output));
         }
         if (File::exists($output) && !$this->hasOption('force')) {
@@ -78,11 +80,16 @@ class GenerateThumbnailCommand extends Command
         }
 
         try {
-            $outputBlob = $imageService->getThumbnail($imageName, $width, $output);
+            $imageService->getManager()->make($imageName)
+                ->resize($width, null, function ($constraint) {
+                    $constraint->aspectRatio();
+                })
+                ->save($output);
+
             if (!$this->option('quiet')) {
                 $this->info('Thumbnail generated in ' . $output);
             }
-        } catch (ImageUtilsException $e) {
+        } catch (ImageException $e) {
             $this->error($e->getMessage());
             return;
         }

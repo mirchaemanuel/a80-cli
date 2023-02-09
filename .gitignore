@@ -6,3 +6,4 @@ builds/**
 .phpunit.result.cache
 .env
 /database/database.sqlite
+ScratchCommand
