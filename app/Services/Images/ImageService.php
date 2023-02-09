@@ -26,7 +26,7 @@ class ImageService
         $this->imageManager = new ImageManager(['driver' => $this->driver->value]);
     }
 
-    public function generateThumbnailPath(string $dirname, string $filename): string
+    public static function generateThumbnailPath(string $dirname, string $filename): string
     {
         return $dirname . DIRECTORY_SEPARATOR . self::THUMB_PREFIX_NAME . $filename;
     }

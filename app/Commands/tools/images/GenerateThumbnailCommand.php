@@ -62,7 +62,7 @@ class GenerateThumbnailCommand extends Command
         //get output imageName
         $output = $this->argument('output');
         if (!$output) {
-            $output = $imageService->generateThumbnailPath(File::dirname($imageName), File::basename($imageName));
+            $output = ImageService::generateThumbnailPath(File::dirname($imageName), File::basename($imageName));
             $this->warn(sprintf("No output imageName specified. %s will be used", $output));
         }
         if (File::exists($output) && !$this->hasOption('force')) {

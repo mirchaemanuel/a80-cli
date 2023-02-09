@@ -43,7 +43,6 @@ class ListImageInFolderCommand extends Command
      */
     public function handle(): void
     {
-
         /**
          * Get folder path
          */
@@ -100,21 +99,20 @@ class ListImageInFolderCommand extends Command
          * Output to CSV file
          */
         if ($this->option('output')) {
+
             $output = $this->option('output');
+
             // check if output is writable
             if (File::exists($output)) {
                 $this->error('Output file  already exists');
                 return;
             }
 
-            $fp = fopen($output, 'wb');
-            fputcsv($fp, ['path', 'filename', 'size', 'mimeType', 'extension']);
-            foreach ($imagePaths as $key => $imagePath) {
-                foreach ($imagePath as $path => $image) {
-                    fputcsv($fp, $image);
-                }
-            }
-            fclose($fp);
+            /**
+             * write the CSV file
+             */
+            $this->outputCsv($output, $imagePaths);
+
             $this->info('Output to CSV file: ' . $output);
         }
 
@@ -139,7 +137,7 @@ class ListImageInFolderCommand extends Command
                 }
                 $this->call('tools:image:thumb', [
                     'imageName'        => $image['path'],
-                    'output'           => File::dirname($image['path']) . '/' . ImageService::THUMB_PREFIX_NAME . $image['filename'],
+                    'output'           => ImageService::generateThumbnailPath(File::dirname($image['path']), ImageService::THUMB_PREFIX_NAME . $image['filename']),
                     '--width'          => $width,
                     '--quiet'          => true,
                     '-q'               => true,
@@ -147,6 +145,25 @@ class ListImageInFolderCommand extends Command
                 ]);
             });
         }
+    }
+
+    /**
+     * Output to CSV file
+     *
+     * @param $output string path to output file
+     * @param $imagePaths array of image paths
+     * @return void
+     */
+    private function outputCsv(string $output, array $imagePaths): void
+    {
+        $fp = fopen($output, 'wb');
+        fputcsv($fp, ['path', 'filename', 'size', 'mimeType', 'extension']);
+        foreach ($imagePaths as $key => $imagePath) {
+            foreach ($imagePath as $path => $image) {
+                fputcsv($fp, $image);
+            }
+        }
+        fclose($fp);
     }
 
     /**
