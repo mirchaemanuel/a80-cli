@@ -2,9 +2,11 @@
 
 # A80-cli
 
-A80-cli is a simple PHP CLI app in which I will collect the tools that I commonly use for my work and that I currently have in some private repositories or in personal workspace.
+A80-cli is a simple PHP CLI app in which I will collect the tools that I commonly use for my work and that I currently
+have in some private repositories or in personal workspace.
 
-I'm going to collect (and convert) all my tools in this small application written with [Laravel Zero](https://github.com/laravel-zero/laravel-zero).
+I'm going to collect (and convert) all my tools in this small application written
+with [Laravel Zero](https://github.com/laravel-zero/laravel-zero).
 
 It is currently in the preliminary stage.
 
@@ -14,7 +16,8 @@ In addition to the usual tools, I will add new ones to interact with **OpenAI** 
 
 In this phase I am preparing the project in Laravel-Zero to accommodate the various tools.
 
-I had the opportunity to experiment with different aspects of this fantastic project by Nuno Maduro and I find it fantastic and fit for purpose.
+I had the opportunity to experiment with different aspects of this fantastic project by Nuno Maduro and I find it
+fantastic and fit for purpose.
 
 ## Coming soon
 
@@ -28,6 +31,7 @@ I had the opportunity to experiment with different aspects of this fantastic pro
 ## OpenAI
 
 Currently there is some command to interact with OpenAI
+
 - ai:query => allow the user to ask question to OpenAI
 - ai:title-abstract => generate a SEO title and an abstract from a text file (plain text only)
 
@@ -208,6 +212,17 @@ It will create a phar executable archive in `/builds`
                 <li>added some useful warning to tools:image:list command</li>
                 <li>converted VERSION.yml to JSON format for better compatibility</li>
                 <li>added new commands: tools:yaml2json and tools:json2yaml</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>0.2</td>
+        <td>2023-02-10</td>
+        <td>
+            <ul>
+               <li>Introduced `Intervention Image` library for image processing</li>
+               <li>Refactoring ImageService</li>
+               <li>Added new command: tools:image:exif to read EXIF data from image file</li>
             </ul>
         </td>
     </tr>
