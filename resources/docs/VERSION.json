@@ -66,6 +66,15 @@
                 "converted VERSION.yml to JSON format for better compatibility",
                 "added new commands: tools:yaml2json and tools:json2yaml"
             ]
+        },
+        {
+            "release": "0.2",
+            "date": "2023-02-10",
+            "notes": [
+                "Introduced `Intervention Image` library for image processing",
+                "Refactoring ImageService",
+                "Added new command: tools:image:exif to read EXIF data from image file"
+            ]
         }
     ]
 }
