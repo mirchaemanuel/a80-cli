@@ -38,10 +38,7 @@ class GenerateThumbnailCommand extends Command
      */
     public function handle(ImageService $imageService): void
     {
-        if ($imageService === null) {
-            $this->error('please install GD extension or Imagick extension');
-            $this->info('https://www.php.net/manual/en/image.installation.php');
-            $this->info('https://www.php.net/manual/en/imagick.installation.php');
+        if (!$this->checkPrerequisites()) {
             return;
         }
 
@@ -80,20 +77,28 @@ class GenerateThumbnailCommand extends Command
         }
 
         try {
-            $imageService->getManager()->make($imageName)
-                ->resize($width, null, function ($constraint) {
-                    $constraint->aspectRatio();
-                })
-                ->save($output);
+            $imageService->generateThumbnail($imageName, $output, $width);
 
             if (!$this->option('quiet')) {
                 $this->info('Thumbnail generated in ' . $output);
             }
-        } catch (ImageException $e) {
+        } catch (ImageUtilsException $e) {
             $this->error($e->getMessage());
             return;
         }
 
+    }
+
+    private function checkPrerequisites(): bool
+    {
+        if (!extension_loaded('imagick') && !extension_loaded('gd')) {
+            $this->error('please install GD extension or Imagick extension');
+            $this->info('Imagick is recommended');
+            $this->info('https://www.php.net/manual/en/image.installation.php');
+            $this->info('https://www.php.net/manual/en/imagick.installation.php');
+            return false;
+        }
+        return true;
     }
 
     /**
