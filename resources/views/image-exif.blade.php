@@ -1,33 +1,36 @@
 <div class="mx-2 my-1">
-        <div class="w-full font-bold bg-green-400 text-black">
-            - {{ $imageName  }}
-        </div>
-        <table>
-            <thead>
-            <tr>
-                <th>Field</th>
-                <th>Value</th>
-            </tr>
-            </thead>
-            <tbody>
-            @foreach ($exif_data as $field => $data)
-                @if($field === 'COMPUTED')
-                    @continue
-                @endif
+    <div class="w-full font-bold bg-green-400 text-black">
+        - {{ $imageName  }}
+    </div>
+    <table>
+        <thead>
+        <tr>
+            <th>Field</th>
+            <th>Value</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach ($exif_data as $field => $data)
+            @if(is_array($data))
                 <tr>
-                    <td>{{ $field }}</td>
-                    <td>{{ $data }}</td>
+                    <td colspan="2" align="left" class="font-bold text-left text-red">==== {{ $field }} ====</td>
                 </tr>
-            @endforeach
-            <tr>
-                <td colspan="2" align="center" class="text-center">COMPUTED</td>
-            </tr>
-            @foreach ($exif_data['COMPUTED'] as $field => $data)
+                @foreach($data as $key => $value)
+                    <tr>
+                        <td>{{ $key }}</td>
+                        <td>{{ is_array($value) ? var_export($value, true) : $value }}</td>
+                    </tr>
+                @endforeach
                 <tr>
-                    <td>{{ $field }}</td>
-                    <td>{{ $data }}</td>
+                    <td colspan="2" align="left" class="text-left text-red font-bold">---------------------------</td>
                 </tr>
-            @endforeach
-            </tbody>
-        </table>
+            @else
+            <tr>
+                <td>{{ $field }}</td>
+                <td>{{ $data }}</td>
+            </tr>
+            @endif
+        @endforeach
+        </tbody>
+    </table>
 </div>

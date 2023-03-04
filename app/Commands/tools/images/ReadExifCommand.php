@@ -66,7 +66,6 @@ class ReadExifCommand extends Command
             $this->error($e->getMessage());
             return;
         }
-
         render(view('image-exif', [
             'imageName' => Storage::path($imageName),
             'exif_data' => $data

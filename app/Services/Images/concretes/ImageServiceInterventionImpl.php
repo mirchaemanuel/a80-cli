@@ -20,7 +20,7 @@ class ImageServiceInterventionImpl extends ImageService
      *
      * @param ImageDriver $driver the image driver (GD / Imagick)
      */
-    public function __construct(protected readonly ImageDriver $driver)
+    public function __construct(protected ImageDriver $driver)
     {
         parent::__construct($driver);
         $this->imageManager = new ImageManager(['driver' => $this->driver->value]);

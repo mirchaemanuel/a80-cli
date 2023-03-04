@@ -12,7 +12,7 @@ abstract class ImageService
 {
     public const THUMB_PREFIX_NAME = 'thumb_';
 
-    public function __construct(protected readonly ImageDriver $driver)
+    public function __construct(protected  ImageDriver $driver)
     {
     }
 
