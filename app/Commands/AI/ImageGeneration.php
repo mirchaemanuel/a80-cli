@@ -74,15 +74,14 @@ class ImageGeneration extends Command
         }
 
         //***** QUERY *****
-
         $images = $openAIService->imageCreate($prompt, $size, $count);
 
         //***** OUTPUT *****
         if($images) {
             $this->info('saving images:...');
-            foreach($images as $image) {
+            foreach($images as $key => $image) {
                 //saving image to file
-                $filename = $imageName . time() . '.png';
+                $filename = $imageName . $key . time() . '.png';
                 Storage::disk('local')->put($filename, $image);
             }
         } else {
