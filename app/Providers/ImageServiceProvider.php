@@ -2,7 +2,7 @@
 
 namespace App\Providers;
 
-use App\Services\AI\Concretes\OpenAIServiceV1;
+use App\Exceptions\OpenAIServiceV1;
 use App\Services\AI\OpenAIService;
 use App\Services\Images\Concretes\ImageServiceConcrete;
 use App\Services\Images\Concretes\ImageServiceGD;

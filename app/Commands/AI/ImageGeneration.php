@@ -50,7 +50,6 @@ class ImageGeneration extends Command
         if (!$size) {
             $this->info('size not defined, using medium');
             $size = OpenAIImageSize::MEDIUM;
-            return;
         }
 
         //number of images

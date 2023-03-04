@@ -48,4 +48,13 @@ interface OpenAIService
      * @return array list of image data of the generated images
      */
     public function imageCreate(string $prompt, OpenAIImageSize $size, int $count = 1): array;
+
+    /**
+     * Transcribe audio to text
+     *
+     * @param string $fileName name of the audio file (mp3, mp4, mpeg, mpga, m4a, wav, or webm)
+     * @param string $language language of the audio file (ISO 639-1)
+     * @return string text from the audio file
+     */
+    public function trascribe(string $fileName, string $language = null): string;
 }
