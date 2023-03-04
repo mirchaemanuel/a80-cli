@@ -48,8 +48,8 @@ class ImageGeneration extends Command
         //image size
         $size = OpenAIImageSize::getSize($this->option('size'));
         if (!$size) {
-            $this->error('Invalid image size: ' . $this->option('size'));
-            $this->info('Valid sizes are: small, medium, large');
+            $this->info('size not defined, using medium');
+            $size = OpenAIImageSize::MEDIUM;
             return;
         }
 
