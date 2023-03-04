@@ -7,3 +7,4 @@ builds/**
 .env
 /database/database.sqlite
 ScratchCommand
+app/Commands/ScratchCommand.php

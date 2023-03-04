@@ -34,6 +34,8 @@ Currently there is some command to interact with OpenAI
 
 - ai:query => allow the user to ask question to OpenAI
 - ai:title-abstract => generate a SEO title and an abstract from a text file (plain text only)
+- ai:image => generate an image from a prompt with the help of OpenAI
+- ai:audio-to-text => transcribe an audio/video file to text in many languages with the help of OpenAI
 
 ```
 ./a80 ai:query --help
@@ -223,6 +225,16 @@ It will create a phar executable archive in `/builds`
                <li>Introduced `Intervention Image` library for image processing</li>
                <li>Refactoring ImageService</li>
                <li>Added new command: tools:image:exif to read EXIF data from image file</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>0.3</td>
+        <td>2023-03-04</td>
+        <td>
+            <ul>
+               <li>Added new command: `ai:image` to generate image file from prompt with OpenAI</li>
+               <li>Added new command: `ai:audio-to-text` to generate text from audio file with OpenAI</li>
             </ul>
         </td>
     </tr>

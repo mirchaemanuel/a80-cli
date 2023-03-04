@@ -75,6 +75,14 @@
                 "Refactoring ImageService",
                 "Added new command: tools:image:exif to read EXIF data from image file"
             ]
+        },
+        {
+            "release": "0.3",
+            "date": "2023-03-04",
+            "notes": [
+                "Added new command: ai:image to generate image file from prompt with OpenAI",
+                "Added new command: ai:audio-to-text to generate text from audio file with OpenAI",
+            ]
         }
     ]
 }

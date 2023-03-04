@@ -2,6 +2,7 @@
 
 namespace App\Commands\tools\images;
 
+use App\Exceptions\ImageUtilsException;
 use App\Services\Images\ImageService;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Support\Facades\File;
@@ -58,7 +59,13 @@ class ReadExifCommand extends Command
         /**
          * read exif data
          */
-        $data = $imageService->getManager()->make($imageName)->exif();
+        try {
+            $data = $imageService->readExif($imageName);
+
+        } catch (ImageUtilsException $e) {
+            $this->error($e->getMessage());
+            return;
+        }
 
         render(view('image-exif', [
             'imageName' => Storage::path($imageName),
