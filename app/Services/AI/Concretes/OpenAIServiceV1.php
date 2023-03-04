@@ -2,6 +2,7 @@
 
 namespace App\Services\AI\Concretes;
 
+use App\Enums\AI\OpenAIImageSize;
 use App\Enums\AI\OpenAIModel;
 use App\Exceptions\MissingDotEnvFileException;
 use App\Exceptions\MissingOpenAIKeyException;
@@ -80,4 +81,40 @@ class OpenAIServiceV1 implements OpenAIService
         ]);
     }
 
+    /**
+     * Create an image from a prompt
+     *
+     * @param string $prompt prompt to use for the image
+     * @param OpenAIImageSize $size size of the image to create
+     * @param int $count number of images to create
+     * @return array list of image data of the generated images
+     * @throws MissingDotEnvFileException
+     * @throws MissingOpenAIKeyException
+     */
+    public function imageCreate(string $prompt, OpenAIImageSize $size, int $count = 1): array
+    {
+        if($this->client === null) {
+            $this->buildClient();
+        }
+
+        if ($count > 10) {
+            $count = 10;
+        }elseif($count < 1) {
+            $count = 1;
+        }
+
+        $response = $this->client->images()->create([
+            'prompt' => $prompt,
+            'n' => $count,
+            'size' => $size,
+        ]);
+
+        $images = [];
+        foreach ($response->data as $data) {
+            $images[] = file_get_contents($data->url);
+        }
+
+        return $images;
+    }
 }
+
