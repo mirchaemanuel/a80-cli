@@ -1,4 +1,4 @@
-<img src="https://user-images.githubusercontent.com/1971953/212487575-3d285e97-1aba-418d-8e5d-69e4caa39ec5.png" alt="a80-cli logo" height="200"/>
+![A80-cli GitHub Logo](https://user-images.githubusercontent.com/1971953/222934954-e0891cca-79ac-4b02-a330-0e5009968c9f.png)
 
 # A80-cli
 
@@ -6,6 +6,7 @@ A80-cli is a simple PHP CLI app in which I will collect the tools that I commonl
 have in some private repositories or in personal workspace.
 
 I'm going to collect (and convert) all my tools in this small application written
+
 with [Laravel Zero](https://github.com/laravel-zero/laravel-zero).
 
 It is currently in the preliminary stage.
