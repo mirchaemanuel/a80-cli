@@ -6,6 +6,7 @@ use App\Enums\AI\OpenAIImageSize;
 use App\Services\AI\OpenAIService;
 use App\Traits\OpenAICommand;
 use Illuminate\Console\Scheduling\Schedule;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Storage;
 use LaravelZero\Framework\Commands\Command;
 
@@ -18,7 +19,7 @@ class AudioTranscribe extends Command
      *
      * @var string
      */
-    protected $signature = "ai:audio-to-text
+    protected $signature = "ai:audio2text
                             {audioFile : path to audio file}
                             {--l|language= : the language of the input audio. Supplying the input language in ISO-639-1 format will improve accuracy and latency.}
                            ";
@@ -45,7 +46,7 @@ class AudioTranscribe extends Command
 
         //audio file
         $audioFile = $this->argument('audioFile');
-        if(!Storage::disk('local')->exists($audioFile)) {
+        if(!File::exists($audioFile)) {
             $this->error('audio file not found');
             return;
         }
