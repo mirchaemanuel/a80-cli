@@ -9,10 +9,12 @@ use App\Exceptions\MissingOpenAIKeyException;
 use App\Exceptions\UnsupportedAudioFormatException;
 use App\Services\AI\OpenAIService;
 use App\Utils\CheckDotEnv;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Storage;
 use OpenAI;
 use OpenAI\Client as OpenAIClient;
 use OpenAI\Responses\Completions\CreateResponse;
+use Phar;
 
 /**
  * OpenAI Service
@@ -138,11 +140,17 @@ class OpenAIServiceV1 implements OpenAIService
         if (in_array($fileExtension, $supportedAudioFormats, true) === false) {
             throw new UnsupportedAudioFormatException();
         }
-
         //transcribe
+
+        if (Phar::running()) {
+            /**
+             * Instructs phar to intercept fopen, file_get_contents, opendir, and all of the stat-related functions
+             */
+            Phar::interceptFileFuncs();
+        }
         $params = [
             'model' => 'whisper-1',
-            'file'  => fopen(Storage::disk('local')->path($fileName), 'r'),
+            'file'  => fopen($fileName, 'r'),
         ];
         if ($language !== '') {
             $params['language'] = $language;
