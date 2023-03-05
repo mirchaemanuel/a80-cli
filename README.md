@@ -238,5 +238,16 @@ It will create a phar executable archive in `/builds`
             </ul>
         </td>
     </tr>
+    <tr>
+        <td>0.3.1</td>
+        <td>2023-03-05</td>
+        <td>
+            <ul>
+                <li>[bug] image exif - Resolve issue with reading EXIF metadata from some images</li>
+                <li>[bug] ai audio2text: resolve audio file access from inside the phar</li>
+                <li>renamed `audio-to-text` to `audio2text`</li>
+            </ul>
+        </td>
+    </tr>
     </tbody>
 </table>
