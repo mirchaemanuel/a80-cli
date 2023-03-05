@@ -18,7 +18,7 @@ use OpenAI\Responses\Completions\CreateResponse;
 interface OpenAIService
 {
     /**
-     * @return OpenAIServiceV1 ready to be used
+     * @return OpenAIService ready to be used
      *
      * @throws MissingDotEnvFileException
      * @throws MissingOpenAIKeyException
