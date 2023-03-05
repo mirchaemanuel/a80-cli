@@ -20,7 +20,7 @@ class ImageGeneration extends Command
      */
     protected $signature = "ai:image
                            {prompt? : image prompt}
-                           {imageName? : image name}
+                           {imageName? : image name - if not set, date time will be used as name}
                            {--s|size=: [small, medium, large] default is medium}
                            {--c|count=: 1-10 default is 1}
                            ";
@@ -70,7 +70,7 @@ class ImageGeneration extends Command
         //image name
         $imageName = $this->argument('imageName');
         if (!$imageName) {
-            $imageName = $this->ask('Image output name?');
+            $imageName = date('Ymd-');
         }
 
         //***** QUERY *****
