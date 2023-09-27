@@ -81,7 +81,7 @@
             "date": "2023-03-04",
             "notes": [
                 "Added new command: ai:image to generate image file from prompt with OpenAI",
-                "Added new command: ai:audio-to-text to generate text from audio file with OpenAI",
+                "Added new command: ai:audio-to-text to generate text from audio file with OpenAI"
             ]
         },
         {
@@ -91,6 +91,13 @@
                 "[bug] image exif - Resolve issue with reading EXIF metadata from some images",
                 "[bug] ai audio2text: resolve audio file access from inside the phar",
                 "renamed `audio-to-text` to `audio2text`"
+            ]
+        },
+        {
+            "release": "0.3.2",
+            "date": "2023-09-27",
+            "notes": [
+                "framework and related libraries updaated to latest versions"
             ]
         }
     ]
