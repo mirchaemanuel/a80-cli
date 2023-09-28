@@ -97,7 +97,8 @@
             "release": "0.3.2",
             "date": "2023-09-27",
             "notes": [
-                "framework and related libraries updaated to latest versions"
+                "framework and related libraries updaated to latest versions",
+                "added laravel/prompts library"
             ]
         }
     ]
