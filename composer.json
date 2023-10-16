@@ -24,17 +24,10 @@
     "require": {
         "php": "^8.1",
         "ext-imagick": "*",
-<<<<<<< HEAD
-        "guzzlehttp/guzzle": "^7.4",
-        "illuminate/database": "^9.0",
-        "illuminate/http": "^9.0",
-        "illuminate/view": "^9.0",
-=======
         "guzzlehttp/guzzle": "^7.8",
         "illuminate/database": "^10.25",
         "illuminate/http": "^10.25",
         "illuminate/view": "^10.25",
->>>>>>> 7f2a34e (update of framework and related libraries)
         "intervention/image": "^2.7",
         "laminas/laminas-text": "^2.10",
         "laravel-zero/framework": "^10.1",
