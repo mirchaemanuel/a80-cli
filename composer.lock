@@ -825,6 +825,7 @@
         {
             "name": "illuminate/bus",
 <<<<<<< HEAD
+<<<<<<< HEAD
             "version": "v9.52.16",
             "source": {
                 "type": "git",
@@ -837,6 +838,9 @@
                 "reference": "4c719a19c3d8c34b2494a7206f8ffde3eff3f983",
 =======
             "version": "v10.25.1",
+=======
+            "version": "v10.28.0",
+>>>>>>> a7c34aa (updated composer / .gitigore)
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/bus.git",
@@ -906,17 +910,22 @@
         },
         {
             "name": "illuminate/cache",
-            "version": "v10.25.1",
+            "version": "v10.28.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/cache.git",
-                "reference": "0653c1b808f72c4aca225d3fa978d4acd1b09c5a"
+                "reference": "a31defc834c6ebaddd1dccc6358306562209f481"
             },
             "dist": {
                 "type": "zip",
+<<<<<<< HEAD
                 "url": "https://api.github.com/repos/illuminate/cache/zipball/0653c1b808f72c4aca225d3fa978d4acd1b09c5a",
                 "reference": "0653c1b808f72c4aca225d3fa978d4acd1b09c5a",
 >>>>>>> 7f2a34e (update of framework and related libraries)
+=======
+                "url": "https://api.github.com/repos/illuminate/cache/zipball/a31defc834c6ebaddd1dccc6358306562209f481",
+                "reference": "a31defc834c6ebaddd1dccc6358306562209f481",
+>>>>>>> a7c34aa (updated composer / .gitigore)
                 "shasum": ""
             },
             "require": {
@@ -966,6 +975,7 @@
                 "source": "https://github.com/laravel/framework"
             },
 <<<<<<< HEAD
+<<<<<<< HEAD
             "time": "2023-06-01T16:09:55+00:00"
         },
         {
@@ -982,20 +992,28 @@
                 "reference": "d3710b0b244bfc62c288c1a87eaa62dd28352d1f",
 =======
             "time": "2023-09-22T15:13:38+00:00"
+=======
+            "time": "2023-10-02T18:20:22+00:00"
+>>>>>>> a7c34aa (updated composer / .gitigore)
         },
         {
             "name": "illuminate/collections",
-            "version": "v10.25.1",
+            "version": "v10.28.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/collections.git",
-                "reference": "133f59956c8002448b07a3ff5f4352f3b3de5614"
+                "reference": "bb8784ce913bd46f944b4bd67cd857f40d9cfe68"
             },
             "dist": {
                 "type": "zip",
+<<<<<<< HEAD
                 "url": "https://api.github.com/repos/illuminate/collections/zipball/133f59956c8002448b07a3ff5f4352f3b3de5614",
                 "reference": "133f59956c8002448b07a3ff5f4352f3b3de5614",
 >>>>>>> 7f2a34e (update of framework and related libraries)
+=======
+                "url": "https://api.github.com/repos/illuminate/collections/zipball/bb8784ce913bd46f944b4bd67cd857f40d9cfe68",
+                "reference": "bb8784ce913bd46f944b4bd67cd857f40d9cfe68",
+>>>>>>> a7c34aa (updated composer / .gitigore)
                 "shasum": ""
             },
             "require": {
@@ -1038,6 +1056,7 @@
                 "source": "https://github.com/laravel/framework"
             },
 <<<<<<< HEAD
+<<<<<<< HEAD
             "time": "2023-06-11T21:17:10+00:00"
         },
         {
@@ -1050,6 +1069,13 @@
             "name": "illuminate/conditionable",
             "version": "v10.25.1",
 >>>>>>> 7f2a34e (update of framework and related libraries)
+=======
+            "time": "2023-10-10T12:55:25+00:00"
+        },
+        {
+            "name": "illuminate/conditionable",
+            "version": "v10.28.0",
+>>>>>>> a7c34aa (updated composer / .gitigore)
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/conditionable.git",
@@ -1096,10 +1122,14 @@
         {
             "name": "illuminate/config",
 <<<<<<< HEAD
+<<<<<<< HEAD
             "version": "v9.52.16",
 =======
             "version": "v10.25.1",
 >>>>>>> 7f2a34e (update of framework and related libraries)
+=======
+            "version": "v10.28.0",
+>>>>>>> a7c34aa (updated composer / .gitigore)
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/config.git",
@@ -1148,6 +1178,7 @@
         {
             "name": "illuminate/console",
 <<<<<<< HEAD
+<<<<<<< HEAD
             "version": "v9.52.16",
             "source": {
                 "type": "git",
@@ -1160,16 +1191,24 @@
                 "reference": "c794b268b9fd3c2a535c766c011fb574e51b071e",
 =======
             "version": "v10.25.1",
+=======
+            "version": "v10.28.0",
+>>>>>>> a7c34aa (updated composer / .gitigore)
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/console.git",
-                "reference": "f36c6b5f5db32efce2d52f0afb855e658ae4fcd5"
+                "reference": "cde1c0af65175205d839d9d7366ea06e2e154964"
             },
             "dist": {
                 "type": "zip",
+<<<<<<< HEAD
                 "url": "https://api.github.com/repos/illuminate/console/zipball/f36c6b5f5db32efce2d52f0afb855e658ae4fcd5",
                 "reference": "f36c6b5f5db32efce2d52f0afb855e658ae4fcd5",
 >>>>>>> 7f2a34e (update of framework and related libraries)
+=======
+                "url": "https://api.github.com/repos/illuminate/console/zipball/cde1c0af65175205d839d9d7366ea06e2e154964",
+                "reference": "cde1c0af65175205d839d9d7366ea06e2e154964",
+>>>>>>> a7c34aa (updated composer / .gitigore)
                 "shasum": ""
             },
             "require": {
@@ -1222,6 +1261,7 @@
                 "source": "https://github.com/laravel/framework"
             },
 <<<<<<< HEAD
+<<<<<<< HEAD
             "time": "2023-06-07T17:21:24+00:00"
         },
         {
@@ -1234,6 +1274,13 @@
             "name": "illuminate/container",
             "version": "v10.25.1",
 >>>>>>> 7f2a34e (update of framework and related libraries)
+=======
+            "time": "2023-10-09T14:21:07+00:00"
+        },
+        {
+            "name": "illuminate/container",
+            "version": "v10.28.0",
+>>>>>>> a7c34aa (updated composer / .gitigore)
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/container.git",
@@ -1285,10 +1332,14 @@
         {
             "name": "illuminate/contracts",
 <<<<<<< HEAD
+<<<<<<< HEAD
             "version": "v9.52.16",
 =======
             "version": "v10.25.1",
 >>>>>>> 7f2a34e (update of framework and related libraries)
+=======
+            "version": "v10.28.0",
+>>>>>>> a7c34aa (updated composer / .gitigore)
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/contracts.git",
@@ -1337,6 +1388,7 @@
         {
             "name": "illuminate/database",
 <<<<<<< HEAD
+<<<<<<< HEAD
             "version": "v9.52.16",
             "source": {
                 "type": "git",
@@ -1349,16 +1401,24 @@
                 "reference": "93cfc8e1f9ac147e6a2851ecabe8d8f21ad85182",
 =======
             "version": "v10.25.1",
+=======
+            "version": "v10.28.0",
+>>>>>>> a7c34aa (updated composer / .gitigore)
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/database.git",
-                "reference": "a0ca9388607b066bfc0849e5e8bbddb7cbf958dd"
+                "reference": "7b82234921a80bfc7a8fe67ff3ba3043c384fc04"
             },
             "dist": {
                 "type": "zip",
+<<<<<<< HEAD
                 "url": "https://api.github.com/repos/illuminate/database/zipball/a0ca9388607b066bfc0849e5e8bbddb7cbf958dd",
                 "reference": "a0ca9388607b066bfc0849e5e8bbddb7cbf958dd",
 >>>>>>> 7f2a34e (update of framework and related libraries)
+=======
+                "url": "https://api.github.com/repos/illuminate/database/zipball/7b82234921a80bfc7a8fe67ff3ba3043c384fc04",
+                "reference": "7b82234921a80bfc7a8fe67ff3ba3043c384fc04",
+>>>>>>> a7c34aa (updated composer / .gitigore)
                 "shasum": ""
             },
             "require": {
@@ -1415,6 +1475,7 @@
                 "source": "https://github.com/laravel/framework"
             },
 <<<<<<< HEAD
+<<<<<<< HEAD
             "time": "2023-06-11T21:17:10+00:00"
         },
         {
@@ -1427,6 +1488,13 @@
             "name": "illuminate/events",
             "version": "v10.25.1",
 >>>>>>> 7f2a34e (update of framework and related libraries)
+=======
+            "time": "2023-10-09T18:36:56+00:00"
+        },
+        {
+            "name": "illuminate/events",
+            "version": "v10.28.0",
+>>>>>>> a7c34aa (updated composer / .gitigore)
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/events.git",
@@ -1482,10 +1550,14 @@
         {
             "name": "illuminate/filesystem",
 <<<<<<< HEAD
+<<<<<<< HEAD
             "version": "v9.52.16",
 =======
             "version": "v10.25.1",
 >>>>>>> 7f2a34e (update of framework and related libraries)
+=======
+            "version": "v10.28.0",
+>>>>>>> a7c34aa (updated composer / .gitigore)
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/filesystem.git",
@@ -1550,6 +1622,7 @@
         {
             "name": "illuminate/http",
 <<<<<<< HEAD
+<<<<<<< HEAD
             "version": "v9.52.16",
             "source": {
                 "type": "git",
@@ -1562,6 +1635,9 @@
                 "reference": "774bc656007506a31f15bb420ba41be6abe49c75",
 =======
             "version": "v10.25.1",
+=======
+            "version": "v10.28.0",
+>>>>>>> a7c34aa (updated composer / .gitigore)
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/http.git",
@@ -1629,8 +1705,12 @@
         },
         {
             "name": "illuminate/macroable",
+<<<<<<< HEAD
             "version": "v10.25.1",
 >>>>>>> 7f2a34e (update of framework and related libraries)
+=======
+            "version": "v10.28.0",
+>>>>>>> a7c34aa (updated composer / .gitigore)
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/macroable.git",
@@ -1677,10 +1757,14 @@
         {
             "name": "illuminate/pipeline",
 <<<<<<< HEAD
+<<<<<<< HEAD
             "version": "v9.52.16",
 =======
             "version": "v10.25.1",
 >>>>>>> 7f2a34e (update of framework and related libraries)
+=======
+            "version": "v10.28.0",
+>>>>>>> a7c34aa (updated composer / .gitigore)
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/pipeline.git",
@@ -1741,7 +1825,7 @@
                 "reference": "8802ba84048b7c779872361ce521226c260bc2ef",
 =======
             "name": "illuminate/process",
-            "version": "v10.25.1",
+            "version": "v10.28.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/process.git",
@@ -1792,17 +1876,22 @@
         },
         {
             "name": "illuminate/session",
-            "version": "v10.25.1",
+            "version": "v10.28.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/session.git",
-                "reference": "f39be6b679781d5a7089c76965ed635491b4b5dd"
+                "reference": "46fa3baeccfa7ab6331d02c764c33f1f9b8134a4"
             },
             "dist": {
                 "type": "zip",
+<<<<<<< HEAD
                 "url": "https://api.github.com/repos/illuminate/session/zipball/f39be6b679781d5a7089c76965ed635491b4b5dd",
                 "reference": "f39be6b679781d5a7089c76965ed635491b4b5dd",
 >>>>>>> 7f2a34e (update of framework and related libraries)
+=======
+                "url": "https://api.github.com/repos/illuminate/session/zipball/46fa3baeccfa7ab6331d02c764c33f1f9b8134a4",
+                "reference": "46fa3baeccfa7ab6331d02c764c33f1f9b8134a4",
+>>>>>>> a7c34aa (updated composer / .gitigore)
                 "shasum": ""
             },
             "require": {
@@ -1847,6 +1936,7 @@
                 "source": "https://github.com/laravel/framework"
             },
 <<<<<<< HEAD
+<<<<<<< HEAD
             "time": "2023-05-04T14:53:51+00:00"
         },
         {
@@ -1863,20 +1953,28 @@
                 "reference": "223c608dbca27232df6213f776bfe7bdeec24874",
 =======
             "time": "2023-05-09T13:08:05+00:00"
+=======
+            "time": "2023-10-02T18:20:22+00:00"
+>>>>>>> a7c34aa (updated composer / .gitigore)
         },
         {
             "name": "illuminate/support",
-            "version": "v10.25.1",
+            "version": "v10.28.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/support.git",
-                "reference": "c7cf96f64ae6766a85fcd17f46afcae5a6a88744"
+                "reference": "dd3b3275a9dbd30736363f232e6bc2970d7681e9"
             },
             "dist": {
                 "type": "zip",
+<<<<<<< HEAD
                 "url": "https://api.github.com/repos/illuminate/support/zipball/c7cf96f64ae6766a85fcd17f46afcae5a6a88744",
                 "reference": "c7cf96f64ae6766a85fcd17f46afcae5a6a88744",
 >>>>>>> 7f2a34e (update of framework and related libraries)
+=======
+                "url": "https://api.github.com/repos/illuminate/support/zipball/dd3b3275a9dbd30736363f232e6bc2970d7681e9",
+                "reference": "dd3b3275a9dbd30736363f232e6bc2970d7681e9",
+>>>>>>> a7c34aa (updated composer / .gitigore)
                 "shasum": ""
             },
             "require": {
@@ -1935,6 +2033,7 @@
                 "source": "https://github.com/laravel/framework"
             },
 <<<<<<< HEAD
+<<<<<<< HEAD
             "time": "2023-06-11T21:11:53+00:00"
         },
         {
@@ -1951,10 +2050,13 @@
                 "reference": "0cf467866dfb40ea01f5fe72e626eccdcdd63c19",
 =======
             "time": "2023-09-21T20:37:39+00:00"
+=======
+            "time": "2023-10-06T13:41:04+00:00"
+>>>>>>> a7c34aa (updated composer / .gitigore)
         },
         {
             "name": "illuminate/testing",
-            "version": "v10.25.1",
+            "version": "v10.28.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/testing.git",
@@ -2030,17 +2132,22 @@
         },
         {
             "name": "illuminate/view",
-            "version": "v10.25.1",
+            "version": "v10.28.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/view.git",
-                "reference": "8d92ac6e6165db9122cbe741c272292377954950"
+                "reference": "c1eacdb5255a0f332c1654e8758e13af6c6a4e0d"
             },
             "dist": {
                 "type": "zip",
+<<<<<<< HEAD
                 "url": "https://api.github.com/repos/illuminate/view/zipball/8d92ac6e6165db9122cbe741c272292377954950",
                 "reference": "8d92ac6e6165db9122cbe741c272292377954950",
 >>>>>>> 7f2a34e (update of framework and related libraries)
+=======
+                "url": "https://api.github.com/repos/illuminate/view/zipball/c1eacdb5255a0f332c1654e8758e13af6c6a4e0d",
+                "reference": "c1eacdb5255a0f332c1654e8758e13af6c6a4e0d",
+>>>>>>> a7c34aa (updated composer / .gitigore)
                 "shasum": ""
             },
             "require": {
@@ -2082,10 +2189,14 @@
                 "source": "https://github.com/laravel/framework"
             },
 <<<<<<< HEAD
+<<<<<<< HEAD
             "time": "2023-03-13T01:21:46+00:00"
 =======
             "time": "2023-09-25T00:45:27+00:00"
 >>>>>>> 7f2a34e (update of framework and related libraries)
+=======
+            "time": "2023-10-05T13:03:55+00:00"
+>>>>>>> a7c34aa (updated composer / .gitigore)
         },
         {
             "name": "intervention/image",
@@ -2236,6 +2347,7 @@
         {
             "name": "laminas/laminas-servicemanager",
 <<<<<<< HEAD
+<<<<<<< HEAD
             "version": "3.22.0",
             "source": {
                 "type": "git",
@@ -2248,25 +2360,37 @@
                 "reference": "b4f547078af2ac3173cbe4a64e8fdfbd626c77ae",
 =======
             "version": "3.21.0",
+=======
+            "version": "3.22.0",
+>>>>>>> a7c34aa (updated composer / .gitigore)
             "source": {
                 "type": "git",
                 "url": "https://github.com/laminas/laminas-servicemanager.git",
-                "reference": "625f2aa3bc6dd02688b2da5155b3a69870812bda"
+                "reference": "b4f547078af2ac3173cbe4a64e8fdfbd626c77ae"
             },
             "dist": {
                 "type": "zip",
+<<<<<<< HEAD
                 "url": "https://api.github.com/repos/laminas/laminas-servicemanager/zipball/625f2aa3bc6dd02688b2da5155b3a69870812bda",
                 "reference": "625f2aa3bc6dd02688b2da5155b3a69870812bda",
 >>>>>>> 7f2a34e (update of framework and related libraries)
+=======
+                "url": "https://api.github.com/repos/laminas/laminas-servicemanager/zipball/b4f547078af2ac3173cbe4a64e8fdfbd626c77ae",
+                "reference": "b4f547078af2ac3173cbe4a64e8fdfbd626c77ae",
+>>>>>>> a7c34aa (updated composer / .gitigore)
                 "shasum": ""
             },
             "require": {
                 "laminas/laminas-stdlib": "^3.17",
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "php": "~8.1.0 || ~8.2.0 || ~8.3.0",
 =======
                 "php": "~8.1.0 || ~8.2.0",
 >>>>>>> 7f2a34e (update of framework and related libraries)
+=======
+                "php": "~8.1.0 || ~8.2.0 || ~8.3.0",
+>>>>>>> a7c34aa (updated composer / .gitigore)
                 "psr/container": "^1.0"
             },
             "conflict": {
@@ -2288,6 +2412,7 @@
                 "laminas/laminas-coding-standard": "~2.5.0",
                 "laminas/laminas-container-config-test": "^0.8",
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "mikey179/vfsstream": "^1.6.11",
                 "phpbench/phpbench": "^1.2.9",
                 "phpunit/phpunit": "^10.4",
@@ -2297,6 +2422,11 @@
                 "phpbench/phpbench": "^1.2.9",
                 "phpunit/phpunit": "^10.0.17",
 >>>>>>> 7f2a34e (update of framework and related libraries)
+=======
+                "mikey179/vfsstream": "^1.6.11",
+                "phpbench/phpbench": "^1.2.9",
+                "phpunit/phpunit": "^10.4",
+>>>>>>> a7c34aa (updated composer / .gitigore)
                 "psalm/plugin-phpunit": "^0.18.4",
                 "vimeo/psalm": "^5.8.0"
             },
@@ -2346,10 +2476,14 @@
                 }
             ],
 <<<<<<< HEAD
+<<<<<<< HEAD
             "time": "2023-10-10T21:23:36+00:00"
 =======
             "time": "2023-05-14T12:24:54+00:00"
 >>>>>>> 7f2a34e (update of framework and related libraries)
+=======
+            "time": "2023-10-10T21:23:36+00:00"
+>>>>>>> a7c34aa (updated composer / .gitigore)
         },
         {
             "name": "laminas/laminas-stdlib",
@@ -2472,16 +2606,16 @@
         },
         {
             "name": "laravel-zero/foundation",
-            "version": "v10.23.0",
+            "version": "v10.28.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel-zero/foundation.git",
-                "reference": "44ac390c3efcdeba9ca9b82825b3536059386718"
+                "reference": "6ae732f1def1716de65cc07e1ee85701fdc5c9e8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel-zero/foundation/zipball/44ac390c3efcdeba9ca9b82825b3536059386718",
-                "reference": "44ac390c3efcdeba9ca9b82825b3536059386718",
+                "url": "https://api.github.com/repos/laravel-zero/foundation/zipball/6ae732f1def1716de65cc07e1ee85701fdc5c9e8",
+                "reference": "6ae732f1def1716de65cc07e1ee85701fdc5c9e8",
                 "shasum": ""
             },
             "require": {
@@ -2511,39 +2645,39 @@
                 "laravel"
             ],
             "support": {
-                "source": "https://github.com/laravel-zero/foundation/tree/v10.23.0"
+                "source": "https://github.com/laravel-zero/foundation/tree/v10.28.0"
             },
-            "time": "2023-09-13T09:27:22+00:00"
+            "time": "2023-10-12T08:25:43+00:00"
         },
         {
             "name": "laravel-zero/framework",
-            "version": "v10.1.2",
+            "version": "v10.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel-zero/framework.git",
-                "reference": "7d04a0f9da330bb4fbc0e10ed0f5bd3056e981ba"
+                "reference": "af2f627ed12222d96c89fc441754f43dabdb4d21"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel-zero/framework/zipball/7d04a0f9da330bb4fbc0e10ed0f5bd3056e981ba",
-                "reference": "7d04a0f9da330bb4fbc0e10ed0f5bd3056e981ba",
+                "url": "https://api.github.com/repos/laravel-zero/framework/zipball/af2f627ed12222d96c89fc441754f43dabdb4d21",
+                "reference": "af2f627ed12222d96c89fc441754f43dabdb4d21",
                 "shasum": ""
             },
             "require": {
                 "dragonmantank/cron-expression": "^3.3.3",
                 "ext-json": "*",
-                "illuminate/cache": "^10.13.5",
-                "illuminate/collections": "^10.13.5",
-                "illuminate/config": "^10.13.5",
-                "illuminate/console": "^10.13.5",
-                "illuminate/container": "^10.13.5",
-                "illuminate/contracts": "^10.13.5",
-                "illuminate/events": "^10.13.5",
-                "illuminate/filesystem": "^10.13.5",
-                "illuminate/process": "^10.13.5",
-                "illuminate/support": "^10.13.5",
-                "illuminate/testing": "^10.13.5",
-                "laravel-zero/foundation": "^10.12",
+                "illuminate/cache": "^10.28",
+                "illuminate/collections": "^10.28",
+                "illuminate/config": "^10.28",
+                "illuminate/console": "^10.28",
+                "illuminate/container": "^10.28",
+                "illuminate/contracts": "^10.28",
+                "illuminate/events": "^10.28",
+                "illuminate/filesystem": "^10.28",
+                "illuminate/process": "^10.28",
+                "illuminate/support": "^10.28",
+                "illuminate/testing": "^10.28",
+                "laravel-zero/foundation": "^10.28",
                 "league/flysystem": "^3.15.1",
                 "nunomaduro/collision": "^6.4.0|^7.8.1",
                 "nunomaduro/laravel-console-summary": "^1.10.0",
@@ -2562,22 +2696,22 @@
             },
             "require-dev": {
                 "guzzlehttp/guzzle": "^7.7",
-                "illuminate/bus": "^10.13.5",
-                "illuminate/database": "^10.13.5",
-                "illuminate/http": "^10.13.5",
-                "illuminate/log": "^10.13.5",
-                "illuminate/queue": "^10.13.5",
-                "illuminate/redis": "^10.13.5",
-                "illuminate/view": "^10.13.5",
+                "illuminate/bus": "^10.28",
+                "illuminate/database": "^10.28",
+                "illuminate/http": "^10.28",
+                "illuminate/log": "^10.28",
+                "illuminate/queue": "^10.28",
+                "illuminate/redis": "^10.28",
+                "illuminate/view": "^10.28",
                 "laminas/laminas-text": "^2.10",
-                "laravel-zero/phar-updater": "^1.3",
-                "laravel/pint": "^1.11",
+                "laravel-zero/phar-updater": "^1.4",
+                "laravel/pint": "^1.13.3",
                 "nunomaduro/laravel-console-dusk": "^1.11",
                 "nunomaduro/laravel-console-menu": "^3.4",
                 "nunomaduro/termwind": "^1.15.1",
-                "pestphp/pest": "^2.13.0",
+                "pestphp/pest": "^2.22.1",
                 "pestphp/pest-plugin-laravel": "^2.2",
-                "phpstan/phpstan": "^1.10.28"
+                "phpstan/phpstan": "^1.10.38"
             },
             "suggest": {
                 "ext-pcntl": "Required to ensure that data is cleared when cancelling the build process."
@@ -2620,7 +2754,7 @@
                 "issues": "https://github.com/laravel-zero/laravel-zero/issues",
                 "source": "https://github.com/laravel-zero/laravel-zero"
             },
-            "time": "2023-08-29T16:08:16+00:00"
+            "time": "2023-10-12T08:38:49+00:00"
         },
         {
 <<<<<<< HEAD
@@ -2640,16 +2774,16 @@
             "require": {
 =======
             "name": "laravel/prompts",
-            "version": "v0.1.9",
+            "version": "v0.1.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/prompts.git",
-                "reference": "b603410e7af1040aa2d29e0a2cdca570bb63e827"
+                "reference": "cce65a90e64712909ea1adc033e1d88de8455ffd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/prompts/zipball/b603410e7af1040aa2d29e0a2cdca570bb63e827",
-                "reference": "b603410e7af1040aa2d29e0a2cdca570bb63e827",
+                "url": "https://api.github.com/repos/laravel/prompts/zipball/cce65a90e64712909ea1adc033e1d88de8455ffd",
+                "reference": "cce65a90e64712909ea1adc033e1d88de8455ffd",
                 "shasum": ""
             },
             "require": {
@@ -2691,22 +2825,22 @@
             ],
             "support": {
                 "issues": "https://github.com/laravel/prompts/issues",
-                "source": "https://github.com/laravel/prompts/tree/v0.1.9"
+                "source": "https://github.com/laravel/prompts/tree/v0.1.11"
             },
-            "time": "2023-09-26T13:14:20+00:00"
+            "time": "2023-10-03T01:07:35+00:00"
         },
         {
             "name": "league/flysystem",
-            "version": "3.16.0",
+            "version": "3.17.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "4fdf372ca6b63c6e281b1c01a624349ccb757729"
+                "reference": "bd4c9b26849d82364119c68429541f1631fba94b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/4fdf372ca6b63c6e281b1c01a624349ccb757729",
-                "reference": "4fdf372ca6b63c6e281b1c01a624349ccb757729",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/bd4c9b26849d82364119c68429541f1631fba94b",
+                "reference": "bd4c9b26849d82364119c68429541f1631fba94b",
                 "shasum": ""
             },
             "require": {
@@ -2773,10 +2907,14 @@
             "support": {
                 "issues": "https://github.com/thephpleague/flysystem/issues",
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "source": "https://github.com/thephpleague/flysystem/tree/3.17.0"
 =======
                 "source": "https://github.com/thephpleague/flysystem/tree/3.16.0"
 >>>>>>> 7f2a34e (update of framework and related libraries)
+=======
+                "source": "https://github.com/thephpleague/flysystem/tree/3.17.0"
+>>>>>>> a7c34aa (updated composer / .gitigore)
             },
             "funding": [
                 {
@@ -2789,10 +2927,14 @@
                 }
             ],
 <<<<<<< HEAD
+<<<<<<< HEAD
             "time": "2023-10-05T20:15:05+00:00"
 =======
             "time": "2023-09-07T19:22:17+00:00"
 >>>>>>> 7f2a34e (update of framework and related libraries)
+=======
+            "time": "2023-10-05T20:15:05+00:00"
+>>>>>>> a7c34aa (updated composer / .gitigore)
         },
         {
             "name": "league/flysystem-local",
@@ -4748,6 +4890,7 @@
         {
             "name": "symfony/error-handler",
 <<<<<<< HEAD
+<<<<<<< HEAD
             "version": "v6.3.5",
             "source": {
                 "type": "git",
@@ -4760,16 +4903,24 @@
                 "reference": "1f69476b64fb47105c06beef757766c376b548c4",
 =======
             "version": "v6.3.2",
+=======
+            "version": "v6.3.5",
+>>>>>>> a7c34aa (updated composer / .gitigore)
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/error-handler.git",
-                "reference": "85fd65ed295c4078367c784e8a5a6cee30348b7a"
+                "reference": "1f69476b64fb47105c06beef757766c376b548c4"
             },
             "dist": {
                 "type": "zip",
+<<<<<<< HEAD
                 "url": "https://api.github.com/repos/symfony/error-handler/zipball/85fd65ed295c4078367c784e8a5a6cee30348b7a",
                 "reference": "85fd65ed295c4078367c784e8a5a6cee30348b7a",
 >>>>>>> 7f2a34e (update of framework and related libraries)
+=======
+                "url": "https://api.github.com/repos/symfony/error-handler/zipball/1f69476b64fb47105c06beef757766c376b548c4",
+                "reference": "1f69476b64fb47105c06beef757766c376b548c4",
+>>>>>>> a7c34aa (updated composer / .gitigore)
                 "shasum": ""
             },
             "require": {
@@ -4815,10 +4966,14 @@
             "homepage": "https://symfony.com",
             "support": {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "source": "https://github.com/symfony/error-handler/tree/v6.3.5"
 =======
                 "source": "https://github.com/symfony/error-handler/tree/v6.3.2"
 >>>>>>> 7f2a34e (update of framework and related libraries)
+=======
+                "source": "https://github.com/symfony/error-handler/tree/v6.3.5"
+>>>>>>> a7c34aa (updated composer / .gitigore)
             },
             "funding": [
                 {
@@ -4835,10 +4990,14 @@
                 }
             ],
 <<<<<<< HEAD
+<<<<<<< HEAD
             "time": "2023-09-12T06:57:20+00:00"
 =======
             "time": "2023-07-16T17:05:46+00:00"
 >>>>>>> 7f2a34e (update of framework and related libraries)
+=======
+            "time": "2023-09-12T06:57:20+00:00"
+>>>>>>> a7c34aa (updated composer / .gitigore)
         },
         {
             "name": "symfony/event-dispatcher",
@@ -4999,6 +5158,7 @@
         {
             "name": "symfony/finder",
 <<<<<<< HEAD
+<<<<<<< HEAD
             "version": "v6.3.5",
             "source": {
                 "type": "git",
@@ -5011,16 +5171,24 @@
                 "reference": "a1b31d88c0e998168ca7792f222cbecee47428c4",
 =======
             "version": "v6.3.3",
+=======
+            "version": "v6.3.5",
+>>>>>>> a7c34aa (updated composer / .gitigore)
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
-                "reference": "9915db259f67d21eefee768c1abcf1cc61b1fc9e"
+                "reference": "a1b31d88c0e998168ca7792f222cbecee47428c4"
             },
             "dist": {
                 "type": "zip",
+<<<<<<< HEAD
                 "url": "https://api.github.com/repos/symfony/finder/zipball/9915db259f67d21eefee768c1abcf1cc61b1fc9e",
                 "reference": "9915db259f67d21eefee768c1abcf1cc61b1fc9e",
 >>>>>>> 7f2a34e (update of framework and related libraries)
+=======
+                "url": "https://api.github.com/repos/symfony/finder/zipball/a1b31d88c0e998168ca7792f222cbecee47428c4",
+                "reference": "a1b31d88c0e998168ca7792f222cbecee47428c4",
+>>>>>>> a7c34aa (updated composer / .gitigore)
                 "shasum": ""
             },
             "require": {
@@ -5056,10 +5224,14 @@
             "homepage": "https://symfony.com",
             "support": {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "source": "https://github.com/symfony/finder/tree/v6.3.5"
 =======
                 "source": "https://github.com/symfony/finder/tree/v6.3.3"
 >>>>>>> 7f2a34e (update of framework and related libraries)
+=======
+                "source": "https://github.com/symfony/finder/tree/v6.3.5"
+>>>>>>> a7c34aa (updated composer / .gitigore)
             },
             "funding": [
                 {
@@ -5075,6 +5247,7 @@
                     "type": "tidelift"
                 }
             ],
+<<<<<<< HEAD
 <<<<<<< HEAD
             "time": "2023-09-26T12:56:25+00:00"
         },
@@ -5092,20 +5265,28 @@
                 "reference": "b50f5e281d722cb0f4c296f908bacc3e2b721957",
 =======
             "time": "2023-07-31T08:31:44+00:00"
+=======
+            "time": "2023-09-26T12:56:25+00:00"
+>>>>>>> a7c34aa (updated composer / .gitigore)
         },
         {
             "name": "symfony/http-foundation",
-            "version": "v6.3.4",
+            "version": "v6.3.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-foundation.git",
-                "reference": "cac1556fdfdf6719668181974104e6fcfa60e844"
+                "reference": "b50f5e281d722cb0f4c296f908bacc3e2b721957"
             },
             "dist": {
                 "type": "zip",
+<<<<<<< HEAD
                 "url": "https://api.github.com/repos/symfony/http-foundation/zipball/cac1556fdfdf6719668181974104e6fcfa60e844",
                 "reference": "cac1556fdfdf6719668181974104e6fcfa60e844",
 >>>>>>> 7f2a34e (update of framework and related libraries)
+=======
+                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/b50f5e281d722cb0f4c296f908bacc3e2b721957",
+                "reference": "b50f5e281d722cb0f4c296f908bacc3e2b721957",
+>>>>>>> a7c34aa (updated composer / .gitigore)
                 "shasum": ""
             },
             "require": {
@@ -5154,10 +5335,14 @@
             "homepage": "https://symfony.com",
             "support": {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "source": "https://github.com/symfony/http-foundation/tree/v6.3.5"
 =======
                 "source": "https://github.com/symfony/http-foundation/tree/v6.3.4"
 >>>>>>> 7f2a34e (update of framework and related libraries)
+=======
+                "source": "https://github.com/symfony/http-foundation/tree/v6.3.5"
+>>>>>>> a7c34aa (updated composer / .gitigore)
             },
             "funding": [
                 {
@@ -5173,6 +5358,7 @@
                     "type": "tidelift"
                 }
             ],
+<<<<<<< HEAD
 <<<<<<< HEAD
             "time": "2023-09-04T21:33:54+00:00"
         },
@@ -5190,20 +5376,28 @@
                 "reference": "9f991a964368bee8d883e8d57ced4fe9fff04dfc",
 =======
             "time": "2023-08-22T08:20:46+00:00"
+=======
+            "time": "2023-09-04T21:33:54+00:00"
+>>>>>>> a7c34aa (updated composer / .gitigore)
         },
         {
             "name": "symfony/http-kernel",
-            "version": "v6.3.4",
+            "version": "v6.3.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-kernel.git",
-                "reference": "36abb425b4af863ae1fe54d8a8b8b4c76a2bccdb"
+                "reference": "9f991a964368bee8d883e8d57ced4fe9fff04dfc"
             },
             "dist": {
                 "type": "zip",
+<<<<<<< HEAD
                 "url": "https://api.github.com/repos/symfony/http-kernel/zipball/36abb425b4af863ae1fe54d8a8b8b4c76a2bccdb",
                 "reference": "36abb425b4af863ae1fe54d8a8b8b4c76a2bccdb",
 >>>>>>> 7f2a34e (update of framework and related libraries)
+=======
+                "url": "https://api.github.com/repos/symfony/http-kernel/zipball/9f991a964368bee8d883e8d57ced4fe9fff04dfc",
+                "reference": "9f991a964368bee8d883e8d57ced4fe9fff04dfc",
+>>>>>>> a7c34aa (updated composer / .gitigore)
                 "shasum": ""
             },
             "require": {
@@ -5288,10 +5482,14 @@
             "homepage": "https://symfony.com",
             "support": {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "source": "https://github.com/symfony/http-kernel/tree/v6.3.5"
 =======
                 "source": "https://github.com/symfony/http-kernel/tree/v6.3.4"
 >>>>>>> 7f2a34e (update of framework and related libraries)
+=======
+                "source": "https://github.com/symfony/http-kernel/tree/v6.3.5"
+>>>>>>> a7c34aa (updated composer / .gitigore)
             },
             "funding": [
                 {
@@ -5307,6 +5505,7 @@
                     "type": "tidelift"
                 }
             ],
+<<<<<<< HEAD
 <<<<<<< HEAD
             "time": "2023-09-30T06:37:04+00:00"
         },
@@ -5324,20 +5523,28 @@
                 "reference": "d5179eedf1cb2946dbd760475ebf05c251ef6a6e",
 =======
             "time": "2023-08-26T13:54:49+00:00"
+=======
+            "time": "2023-09-30T06:37:04+00:00"
+>>>>>>> a7c34aa (updated composer / .gitigore)
         },
         {
             "name": "symfony/mime",
-            "version": "v6.3.3",
+            "version": "v6.3.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/mime.git",
-                "reference": "9a0cbd52baa5ba5a5b1f0cacc59466f194730f98"
+                "reference": "d5179eedf1cb2946dbd760475ebf05c251ef6a6e"
             },
             "dist": {
                 "type": "zip",
+<<<<<<< HEAD
                 "url": "https://api.github.com/repos/symfony/mime/zipball/9a0cbd52baa5ba5a5b1f0cacc59466f194730f98",
                 "reference": "9a0cbd52baa5ba5a5b1f0cacc59466f194730f98",
 >>>>>>> 7f2a34e (update of framework and related libraries)
+=======
+                "url": "https://api.github.com/repos/symfony/mime/zipball/d5179eedf1cb2946dbd760475ebf05c251ef6a6e",
+                "reference": "d5179eedf1cb2946dbd760475ebf05c251ef6a6e",
+>>>>>>> a7c34aa (updated composer / .gitigore)
                 "shasum": ""
             },
             "require": {
@@ -5393,10 +5600,14 @@
             ],
             "support": {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "source": "https://github.com/symfony/mime/tree/v6.3.5"
 =======
                 "source": "https://github.com/symfony/mime/tree/v6.3.3"
 >>>>>>> 7f2a34e (update of framework and related libraries)
+=======
+                "source": "https://github.com/symfony/mime/tree/v6.3.5"
+>>>>>>> a7c34aa (updated composer / .gitigore)
             },
             "funding": [
                 {
@@ -5413,10 +5624,14 @@
                 }
             ],
 <<<<<<< HEAD
+<<<<<<< HEAD
             "time": "2023-09-29T06:59:36+00:00"
 =======
             "time": "2023-07-31T07:08:24+00:00"
 >>>>>>> 7f2a34e (update of framework and related libraries)
+=======
+            "time": "2023-09-29T06:59:36+00:00"
+>>>>>>> a7c34aa (updated composer / .gitigore)
         },
         {
             "name": "symfony/polyfill-ctype",
@@ -6221,6 +6436,7 @@
         {
             "name": "symfony/string",
 <<<<<<< HEAD
+<<<<<<< HEAD
             "version": "v6.3.5",
             "source": {
                 "type": "git",
@@ -6233,16 +6449,24 @@
                 "reference": "13d76d0fb049051ed12a04bef4f9de8715bea339",
 =======
             "version": "v6.3.2",
+=======
+            "version": "v6.3.5",
+>>>>>>> a7c34aa (updated composer / .gitigore)
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/string.git",
-                "reference": "53d1a83225002635bca3482fcbf963001313fb68"
+                "reference": "13d76d0fb049051ed12a04bef4f9de8715bea339"
             },
             "dist": {
                 "type": "zip",
+<<<<<<< HEAD
                 "url": "https://api.github.com/repos/symfony/string/zipball/53d1a83225002635bca3482fcbf963001313fb68",
                 "reference": "53d1a83225002635bca3482fcbf963001313fb68",
 >>>>>>> 7f2a34e (update of framework and related libraries)
+=======
+                "url": "https://api.github.com/repos/symfony/string/zipball/13d76d0fb049051ed12a04bef4f9de8715bea339",
+                "reference": "13d76d0fb049051ed12a04bef4f9de8715bea339",
+>>>>>>> a7c34aa (updated composer / .gitigore)
                 "shasum": ""
             },
             "require": {
@@ -6300,10 +6524,14 @@
             ],
             "support": {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "source": "https://github.com/symfony/string/tree/v6.3.5"
 =======
                 "source": "https://github.com/symfony/string/tree/v6.3.2"
 >>>>>>> 7f2a34e (update of framework and related libraries)
+=======
+                "source": "https://github.com/symfony/string/tree/v6.3.5"
+>>>>>>> a7c34aa (updated composer / .gitigore)
             },
             "funding": [
                 {
@@ -6320,10 +6548,14 @@
                 }
             ],
 <<<<<<< HEAD
+<<<<<<< HEAD
             "time": "2023-09-18T10:38:32+00:00"
 =======
             "time": "2023-07-05T08:41:27+00:00"
 >>>>>>> 7f2a34e (update of framework and related libraries)
+=======
+            "time": "2023-09-18T10:38:32+00:00"
+>>>>>>> a7c34aa (updated composer / .gitigore)
         },
         {
             "name": "symfony/translation",
@@ -6501,6 +6733,7 @@
         {
             "name": "symfony/var-dumper",
 <<<<<<< HEAD
+<<<<<<< HEAD
             "version": "v6.3.5",
             "source": {
                 "type": "git",
@@ -6513,16 +6746,24 @@
                 "reference": "3d9999376be5fea8de47752837a3e1d1c5f69ef5",
 =======
             "version": "v6.3.4",
+=======
+            "version": "v6.3.5",
+>>>>>>> a7c34aa (updated composer / .gitigore)
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/var-dumper.git",
-                "reference": "2027be14f8ae8eae999ceadebcda5b4909b81d45"
+                "reference": "3d9999376be5fea8de47752837a3e1d1c5f69ef5"
             },
             "dist": {
                 "type": "zip",
+<<<<<<< HEAD
                 "url": "https://api.github.com/repos/symfony/var-dumper/zipball/2027be14f8ae8eae999ceadebcda5b4909b81d45",
                 "reference": "2027be14f8ae8eae999ceadebcda5b4909b81d45",
 >>>>>>> 7f2a34e (update of framework and related libraries)
+=======
+                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/3d9999376be5fea8de47752837a3e1d1c5f69ef5",
+                "reference": "3d9999376be5fea8de47752837a3e1d1c5f69ef5",
+>>>>>>> a7c34aa (updated composer / .gitigore)
                 "shasum": ""
             },
             "require": {
@@ -6578,10 +6819,14 @@
             ],
             "support": {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "source": "https://github.com/symfony/var-dumper/tree/v6.3.5"
 =======
                 "source": "https://github.com/symfony/var-dumper/tree/v6.3.4"
 >>>>>>> 7f2a34e (update of framework and related libraries)
+=======
+                "source": "https://github.com/symfony/var-dumper/tree/v6.3.5"
+>>>>>>> a7c34aa (updated composer / .gitigore)
             },
             "funding": [
                 {
@@ -6598,10 +6843,14 @@
                 }
             ],
 <<<<<<< HEAD
+<<<<<<< HEAD
             "time": "2023-09-12T10:11:35+00:00"
 =======
             "time": "2023-08-24T14:51:05+00:00"
 >>>>>>> 7f2a34e (update of framework and related libraries)
+=======
+            "time": "2023-09-12T10:11:35+00:00"
+>>>>>>> a7c34aa (updated composer / .gitigore)
         },
         {
             "name": "vlucas/phpdotenv",
@@ -7013,6 +7262,7 @@
         {
             "name": "laravel/pint",
 <<<<<<< HEAD
+<<<<<<< HEAD
             "version": "v1.13.3",
             "source": {
                 "type": "git",
@@ -7025,16 +7275,24 @@
                 "reference": "93b2d0d49719bc6e444ba21cd4dbbccec935413d",
 =======
             "version": "v1.13.2",
+=======
+            "version": "v1.13.3",
+>>>>>>> a7c34aa (updated composer / .gitigore)
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/pint.git",
-                "reference": "bbb13460d7f8c5c0cd9a58109beedd79cd7331ff"
+                "reference": "93b2d0d49719bc6e444ba21cd4dbbccec935413d"
             },
             "dist": {
                 "type": "zip",
+<<<<<<< HEAD
                 "url": "https://api.github.com/repos/laravel/pint/zipball/bbb13460d7f8c5c0cd9a58109beedd79cd7331ff",
                 "reference": "bbb13460d7f8c5c0cd9a58109beedd79cd7331ff",
 >>>>>>> 7f2a34e (update of framework and related libraries)
+=======
+                "url": "https://api.github.com/repos/laravel/pint/zipball/93b2d0d49719bc6e444ba21cd4dbbccec935413d",
+                "reference": "93b2d0d49719bc6e444ba21cd4dbbccec935413d",
+>>>>>>> a7c34aa (updated composer / .gitigore)
                 "shasum": ""
             },
             "require": {
@@ -7046,10 +7304,14 @@
             },
             "require-dev": {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "friendsofphp/php-cs-fixer": "^3.34.1",
 =======
                 "friendsofphp/php-cs-fixer": "^3.26.1",
 >>>>>>> 7f2a34e (update of framework and related libraries)
+=======
+                "friendsofphp/php-cs-fixer": "^3.34.1",
+>>>>>>> a7c34aa (updated composer / .gitigore)
                 "illuminate/view": "^10.23.1",
                 "laravel-zero/framework": "^10.1.2",
                 "mockery/mockery": "^1.6.6",
@@ -7092,10 +7354,14 @@
                 "source": "https://github.com/laravel/pint"
             },
 <<<<<<< HEAD
+<<<<<<< HEAD
             "time": "2023-10-10T15:39:09+00:00"
 =======
             "time": "2023-09-19T15:55:02+00:00"
 >>>>>>> 7f2a34e (update of framework and related libraries)
+=======
+            "time": "2023-10-10T15:39:09+00:00"
+>>>>>>> a7c34aa (updated composer / .gitigore)
         },
         {
             "name": "mockery/mockery",
@@ -8002,6 +8268,7 @@
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "reference": "efd339340c840237fad050f3ea6fd8bbbbfc7ed6"
             },
             "dist": {
@@ -8016,6 +8283,14 @@
                 "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/1d9a4a01c3d76c01633678a19bf14c9487c52cc4",
                 "reference": "1d9a4a01c3d76c01633678a19bf14c9487c52cc4",
 >>>>>>> 7f2a34e (update of framework and related libraries)
+=======
+                "reference": "efd339340c840237fad050f3ea6fd8bbbbfc7ed6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/efd339340c840237fad050f3ea6fd8bbbbfc7ed6",
+                "reference": "efd339340c840237fad050f3ea6fd8bbbbfc7ed6",
+>>>>>>> a7c34aa (updated composer / .gitigore)
                 "shasum": ""
             },
             "conflict": {
@@ -8094,12 +8369,17 @@
                 "codeigniter4/shield": "<1.0.0.0-beta4",
                 "codiad/codiad": "<=2.8.4",
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "composer/composer": "<1.10.27|>=2,<2.2.22|>=2.3,<2.6.4",
                 "concrete5/concrete5": "<=9.2.1",
 =======
                 "composer/composer": "<1.10.26|>=2,<2.2.12|>=2.3,<2.3.5",
                 "concrete5/concrete5": "<9.2",
 >>>>>>> 7f2a34e (update of framework and related libraries)
+=======
+                "composer/composer": "<1.10.27|>=2,<2.2.22|>=2.3,<2.6.4",
+                "concrete5/concrete5": "<=9.2.1",
+>>>>>>> a7c34aa (updated composer / .gitigore)
                 "concrete5/core": "<8.5.8|>=9,<9.1",
                 "contao-components/mediaelement": ">=2.14.2,<2.21.1",
                 "contao/contao": ">=4,<4.4.56|>=4.5,<4.9.40|>=4.10,<4.11.7|>=4.13,<4.13.21|>=5.1,<5.1.4",
@@ -8132,10 +8412,14 @@
                 "doctrine/mongodb-odm-bundle": ">=2,<3.0.1",
                 "doctrine/orm": ">=2,<2.4.8|>=2.5,<2.5.1|>=2.8.3,<2.8.4",
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "dolibarr/dolibarr": "<18",
 =======
                 "dolibarr/dolibarr": "<17.0.1",
 >>>>>>> 7f2a34e (update of framework and related libraries)
+=======
+                "dolibarr/dolibarr": "<18",
+>>>>>>> a7c34aa (updated composer / .gitigore)
                 "dompdf/dompdf": "<2.0.2|==2.0.2",
                 "drupal/core": "<9.4.14|>=9.5,<9.5.8|>=10,<10.0.8",
                 "drupal/drupal": ">=6,<6.38|>=7,<7.80|>=8,<8.9.16|>=9,<9.1.12|>=9.2,<9.2.4",
@@ -8165,10 +8449,14 @@
                 "ezsystems/ezplatform-user": ">=1,<1.0.1",
                 "ezsystems/ezpublish-kernel": "<6.13.8.2-dev|>=7,<7.5.30",
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "ezsystems/ezpublish-legacy": "<=2017.12.7.3|>=2018.6,<=2019.03.5.1",
 =======
                 "ezsystems/ezpublish-legacy": "<=2017.12.7.3|>=2018.06,<=2019.03.5.1",
 >>>>>>> 7f2a34e (update of framework and related libraries)
+=======
+                "ezsystems/ezpublish-legacy": "<=2017.12.7.3|>=2018.6,<=2019.03.5.1",
+>>>>>>> a7c34aa (updated composer / .gitigore)
                 "ezsystems/platform-ui-assets-bundle": ">=4.2,<4.2.3",
                 "ezsystems/repository-forms": ">=2.3,<2.3.2.1-dev|>=2.5,<2.5.15",
                 "ezyang/htmlpurifier": "<4.1.1",
@@ -8220,9 +8508,13 @@
                 "gregwar/rst": "<1.0.3",
                 "grumpydictator/firefly-iii": "<6",
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "gugoan/economizzer": "<=0.9.0.0-beta1",
 =======
 >>>>>>> 7f2a34e (update of framework and related libraries)
+=======
+                "gugoan/economizzer": "<=0.9.0.0-beta1",
+>>>>>>> a7c34aa (updated composer / .gitigore)
                 "guzzlehttp/guzzle": "<6.5.8|>=7,<7.4.5",
                 "guzzlehttp/psr7": "<1.9.1|>=2,<2.4.5",
                 "haffner/jh_captcha": "<=2.1.3|>=3,<=3.0.2",
@@ -8249,10 +8541,14 @@
                 "illuminate/view": "<6.20.42|>=7,<7.30.6|>=8,<8.75",
                 "impresscms/impresscms": "<=1.4.5",
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "in2code/femanager": "<5.5.3|>=6,<6.3.4|>=7,<7.2.2",
 =======
                 "in2code/femanager": "<5.5.3|>=6,<6.3.4|>=7,<7.1",
 >>>>>>> 7f2a34e (update of framework and related libraries)
+=======
+                "in2code/femanager": "<5.5.3|>=6,<6.3.4|>=7,<7.2.2",
+>>>>>>> a7c34aa (updated composer / .gitigore)
                 "in2code/ipandlanguageredirect": "<5.1.2",
                 "in2code/lux": "<17.6.1|>=18,<24.0.2",
                 "innologi/typo3-appointments": "<2.0.6",
@@ -8271,10 +8567,14 @@
                 "joomla/framework": ">=2.5.4,<=3.8.12",
                 "joomla/input": ">=2,<2.0.2",
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "joomla/joomla-cms": ">=2.5,<3.9.12",
 =======
                 "joomla/joomla-cms": "<3.9.12",
 >>>>>>> 7f2a34e (update of framework and related libraries)
+=======
+                "joomla/joomla-cms": ">=2.5,<3.9.12",
+>>>>>>> a7c34aa (updated composer / .gitigore)
                 "joomla/session": "<1.3.1",
                 "joyqi/hyper-down": "<=2.4.27",
                 "jsdecena/laracom": "<2.0.9",
@@ -8372,10 +8672,14 @@
                 "opensource-workshop/connect-cms": "<1.7.2|>=2,<2.3.2",
                 "orchid/platform": ">=9,<9.4.4|>=14.0.0.0-alpha4,<14.5",
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "oro/commerce": ">=4.1,<5.0.11|>=5.1,<5.1.1",
 =======
                 "oro/commerce": ">=4.1,<5.0.6",
 >>>>>>> 7f2a34e (update of framework and related libraries)
+=======
+                "oro/commerce": ">=4.1,<5.0.11|>=5.1,<5.1.1",
+>>>>>>> a7c34aa (updated composer / .gitigore)
                 "oro/crm": ">=1.7,<1.7.4|>=3.1,<4.1.17|>=4.2,<4.2.7",
                 "oro/platform": ">=1.7,<1.7.4|>=3.1,<3.1.29|>=4.1,<4.1.17|>=4.2,<4.2.8",
                 "oxid-esales/oxideshop-ce": "<4.5",
@@ -8413,9 +8717,13 @@
                 "pimcore/customer-management-framework-bundle": "<3.4.2",
                 "pimcore/data-hub": "<1.2.4",
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "pimcore/demo": "<10.3",
 =======
 >>>>>>> 7f2a34e (update of framework and related libraries)
+=======
+                "pimcore/demo": "<10.3",
+>>>>>>> a7c34aa (updated composer / .gitigore)
                 "pimcore/perspective-editor": "<1.5.1",
                 "pimcore/pimcore": "<10.6.8",
                 "pixelfed/pixelfed": "<=0.11.4",
@@ -8427,10 +8735,14 @@
                 "prestashop/contactform": ">=1.0.1,<4.3",
                 "prestashop/gamification": "<2.3.2",
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "prestashop/prestashop": "<8.1.2",
 =======
                 "prestashop/prestashop": "<=8.1",
 >>>>>>> 7f2a34e (update of framework and related libraries)
+=======
+                "prestashop/prestashop": "<8.1.2",
+>>>>>>> a7c34aa (updated composer / .gitigore)
                 "prestashop/productcomments": "<5.0.2",
                 "prestashop/ps_emailsubscription": "<2.6.1",
                 "prestashop/ps_facetedsearch": "<3.4.1",
@@ -8441,10 +8753,14 @@
                 "propel/propel1": ">=1,<=1.7.1",
                 "pterodactyl/panel": "<1.7",
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "ptheofan/yii2-statemachine": ">=2.0.0.0-RC1-dev,<=2",
 =======
                 "ptheofan/yii2-statemachine": ">=2",
 >>>>>>> 7f2a34e (update of framework and related libraries)
+=======
+                "ptheofan/yii2-statemachine": ">=2.0.0.0-RC1-dev,<=2",
+>>>>>>> a7c34aa (updated composer / .gitigore)
                 "ptrofimov/beanstalk_console": "<1.7.14",
                 "pusher/pusher-php-server": "<2.2.1",
                 "pwweb/laravel-core": "<=0.3.6.0-beta",
@@ -8508,10 +8824,14 @@
                 "slub/slub-events": "<3.0.3",
                 "smarty/smarty": "<3.1.48|>=4,<4.3.1",
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "snipe/snipe-it": "<=6.2.2",
 =======
                 "snipe/snipe-it": "<=6.0.14",
 >>>>>>> 7f2a34e (update of framework and related libraries)
+=======
+                "snipe/snipe-it": "<=6.2.2",
+>>>>>>> a7c34aa (updated composer / .gitigore)
                 "socalnick/scn-social-auth": "<1.15.2",
                 "socialiteproviders/steam": "<1.1",
                 "spatie/browsershot": "<3.57.4",
@@ -8590,10 +8910,14 @@
                 "topthink/thinkphp": "<=3.2.3",
                 "tpwd/ke_search": "<4.0.3|>=4.1,<4.6.6|>=5,<5.0.2",
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "tribalsystems/zenario": "<=9.4.59197",
 =======
                 "tribalsystems/zenario": "<=9.3.57595",
 >>>>>>> 7f2a34e (update of framework and related libraries)
+=======
+                "tribalsystems/zenario": "<=9.4.59197",
+>>>>>>> a7c34aa (updated composer / .gitigore)
                 "truckersmp/phpwhois": "<=4.3.1",
                 "ttskch/pagination-service-provider": "<1",
                 "twig/twig": "<1.44.7|>=2,<2.15.3|>=3,<3.4.3",
@@ -8622,10 +8946,14 @@
                 "waldhacker/hcaptcha": "<2.1.2",
                 "wallabag/tcpdf": "<6.2.22",
 <<<<<<< HEAD
+<<<<<<< HEAD
                 "wallabag/wallabag": "<2.6.7",
 =======
                 "wallabag/wallabag": "<=2.6.2",
 >>>>>>> 7f2a34e (update of framework and related libraries)
+=======
+                "wallabag/wallabag": "<2.6.7",
+>>>>>>> a7c34aa (updated composer / .gitigore)
                 "wanglelecc/laracms": "<=1.0.3",
                 "web-auth/webauthn-framework": ">=3.3,<3.3.4",
                 "webbuilders-group/silverstripe-kapost-bridge": "<0.4",
@@ -8735,10 +9063,14 @@
                 }
             ],
 <<<<<<< HEAD
+<<<<<<< HEAD
             "time": "2023-10-11T21:04:21+00:00"
 =======
             "time": "2023-09-27T18:04:31+00:00"
 >>>>>>> 7f2a34e (update of framework and related libraries)
+=======
+            "time": "2023-10-11T21:04:21+00:00"
+>>>>>>> a7c34aa (updated composer / .gitigore)
         },
         {
             "name": "sebastian/cli-parser",
