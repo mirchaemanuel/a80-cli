@@ -111,11 +111,12 @@ class OpenAIServiceV1 implements OpenAIService
             'prompt' => $prompt,
             'n'      => $count,
             'size'   => $size,
+            'response_format' => 'b64_json'
         ]);
 
         $images = [];
         foreach ($response->data as $data) {
-            $images[] = file_get_contents($data->url);
+            $images[] = base64_decode($data->b64_json);
         }
 
         return $images;
