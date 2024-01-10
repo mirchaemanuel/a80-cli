@@ -63,8 +63,12 @@ class SiteResponsiveScreenshot extends Command
                     }
                 }
                 //take screenshot
+                $fileName = Str::slug($prefix . ' ' . $url);
                 $browser
-                    ->responsiveScreenshots(Str::slug($prefix . ' ' . $url));
+                    ->responsiveScreenshots($fileName);
+
+                $browser->consoleLog($fileName . '.log');
+
             } catch (Exception $e) {
                 $this->error($e->getMessage());
             }
