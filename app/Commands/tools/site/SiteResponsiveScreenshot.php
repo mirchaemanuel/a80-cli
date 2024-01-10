@@ -67,7 +67,7 @@ class SiteResponsiveScreenshot extends Command
                 $browser
                     ->responsiveScreenshots($fileName);
 
-                $browser->consoleLog($fileName . '.log');
+                $browser->storeConsoleLog($fileName . '.log');
 
             } catch (Exception $e) {
                 $this->error($e->getMessage());
