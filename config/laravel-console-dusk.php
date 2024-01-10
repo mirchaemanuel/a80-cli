@@ -22,7 +22,7 @@ return [
     | When false it will show a Chrome window while running. Within production
     | it will be forced to run in headless mode.
     */
-    'headless' => true,
+    'headless' => false,
 
     /*
     | --------------------------------------------------------------------------
