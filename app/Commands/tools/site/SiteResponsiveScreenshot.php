@@ -62,11 +62,12 @@ class SiteResponsiveScreenshot extends Command
                             ->pause(500);
                     }
                 }
+
                 //take screenshot
                 $fileName = Str::slug($prefix . ' ' . $url);
-                $browser
-                    ->responsiveScreenshots($fileName);
+                $browser->responsiveScreenshots($fileName);
 
+                //save console log
                 $browser->storeConsoleLog($fileName . '.log');
 
             } catch (Exception $e) {
