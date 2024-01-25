@@ -11,3 +11,4 @@ ScratchCommand
 app/Commands/ScratchCommand.php
 .storage/laravel-console-dusk
 .storage/screenshots
+.storage/screenshots/**
