@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1a15eefa0a3f74158ee358083b61392d",
+    "content-hash": "ac3ade98c77935e77decfb9528d87777",
     "packages": [
         {
             "name": "brick/math",
@@ -281,6 +281,63 @@
                 }
             ],
             "time": "2023-08-10T19:36:49+00:00"
+        },
+        {
+            "name": "exonet/powerdns-php",
+            "version": "v4.5.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/exonet/powerdns-php.git",
+                "reference": "ad48c02a257de7041d5c39baf2c4f1573c7144a3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/exonet/powerdns-php/zipball/ad48c02a257de7041d5c39baf2c4f1573c7144a3",
+                "reference": "ad48c02a257de7041d5c39baf2c4f1573c7144a3",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "guzzlehttp/guzzle": "^7.2",
+                "php": "^7.3|^8.0",
+                "psr/log": "^1.0|^2.0|^3.0"
+            },
+            "require-dev": {
+                "dms/phpunit-arraysubset-asserts": "^0.2.1 || ^0.4.0 || ^0.5.0",
+                "mockery/mockery": "^1.2",
+                "phpunit/phpunit": "^9"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Exonet\\Powerdns\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Exonet",
+                    "email": "development@exonet.nl",
+                    "homepage": "https://exonet.nl",
+                    "role": "Developer"
+                }
+            ],
+            "description": "PowerDNS API PHP Client",
+            "homepage": "https://github.com/exonet/powerdns-php",
+            "keywords": [
+                "exonet",
+                "powerdns",
+                "powerdns-api",
+                "powerdns-php"
+            ],
+            "support": {
+                "issues": "https://github.com/exonet/powerdns-php/issues",
+                "source": "https://github.com/exonet/powerdns-php/tree/v4.5.2"
+            },
+            "time": "2023-11-20T08:26:19+00:00"
         },
         {
             "name": "filp/whoops",
