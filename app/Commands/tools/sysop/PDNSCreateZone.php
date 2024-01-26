@@ -86,12 +86,8 @@ class PDNSCreateZone extends Command
             port: $port
         );
 
-        $zone = $powerdns->zone('maritanauto.it');
-
-        $zone->enableDnssec();
-
-        dd($zone);
-
+        // todo to be continued
+        $this->info('Not implemented yet');
 
     }
 
