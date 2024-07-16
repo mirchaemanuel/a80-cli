@@ -11,6 +11,8 @@ enum OpenAIModel: string
     case babbage = 'text-babbage-001';
     case ada = 'text-ada-001';
 
+    case gpt4o = 'gpt-4o';
+
     public static function getModel(string $name): ?OpenAIModel
     {
         return match ( $name ) {

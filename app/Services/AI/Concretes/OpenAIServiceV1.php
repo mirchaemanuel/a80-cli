@@ -9,8 +9,6 @@ use App\Exceptions\MissingOpenAIKeyException;
 use App\Exceptions\UnsupportedAudioFormatException;
 use App\Services\AI\OpenAIService;
 use App\Utils\CheckDotEnv;
-use Illuminate\Support\Facades\File;
-use Illuminate\Support\Facades\Storage;
 use OpenAI;
 use OpenAI\Client as OpenAIClient;
 use OpenAI\Responses\Completions\CreateResponse;
@@ -68,7 +66,7 @@ class OpenAIServiceV1 implements OpenAIService
      */
     public function prompt(string      $prompt,
                            int         $maxTokens = 2000,
-                           OpenAIModel $model = OpenAIModel::davinci,
+                           OpenAIModel $model = OpenAIModel::gpt4o,
                            float       $temperature = 0.9,
 
     )
@@ -77,11 +75,20 @@ class OpenAIServiceV1 implements OpenAIService
             $this->buildClient();
         }
 
-        return $this->client->completions()->create([
+        return $this->client->chat()->create([
             'model'       => $model->value,
-            'prompt'      => $prompt,
             'max_tokens'  => $maxTokens,
             'temperature' => $temperature,
+            "messages"    => [
+                [
+                    "role"    => "system",
+                    "content" => "You are a helpful assistant."
+                ],
+                [
+                    "role"    => "user",
+                    "content" => $prompt
+                ]
+            ]
         ]);
     }
 
@@ -108,9 +115,9 @@ class OpenAIServiceV1 implements OpenAIService
         }
 
         $response = $this->client->images()->create([
-            'prompt' => $prompt,
-            'n'      => $count,
-            'size'   => $size,
+            'prompt'          => $prompt,
+            'n'               => $count,
+            'size'            => $size,
             'response_format' => 'b64_json'
         ]);
 
@@ -137,9 +144,14 @@ class OpenAIServiceV1 implements OpenAIService
 
         //check if audio file is supported by file extension
         $supportedAudioFormats = ['mp3', 'mp4', 'mpeg', 'mpga', 'm4a', 'wav', 'webm'];
-        $fileExtension         = pathinfo($fileName, PATHINFO_EXTENSION);
+        $fileExtension = pathinfo($fileName, PATHINFO_EXTENSION);
         if (in_array($fileExtension, $supportedAudioFormats, true) === false) {
             throw new UnsupportedAudioFormatException();
+        }
+
+        //if fiel not exists
+        if (!file_exists($fileName)) {
+            throw new \Exception('File not found');
         }
         //transcribe
 
@@ -157,7 +169,15 @@ class OpenAIServiceV1 implements OpenAIService
             $params['language'] = $language;
         }
 
-        $response = $this->client->audio()->transcribe($params);
+        $response = $this->client->audio()->transcribe([
+            'model' => 'whisper-1',
+            'file'  => fopen('/Users/ryuujin/workspace/dev2geek/a80-cli/foo.mp4', 'r'),
+                'response_format' => 'verbose_json',
+
+
+        ]);
+
+        dd($response);
 
         return $response->toArray()['text'];
     }

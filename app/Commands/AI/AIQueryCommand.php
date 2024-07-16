@@ -58,16 +58,15 @@ class AIQueryCommand extends Command
         //***** QUERY *****
 
         $response = $openAIService->prompt($question, $maxTokens);
-
         //***** OUTPUT *****
 
         //check output exists
-        if (!isset($response['choices'][0]['text'])) {
+        if (!isset($response['choices'][0]['message'])) {
             $this->error('No answer found');
             return;
         }
 
-        $this->info($response['choices'][0]['text']);
+        $this->info($response['choices'][0]['message']['content']);
     }
 
     /**
