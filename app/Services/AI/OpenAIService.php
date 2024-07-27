@@ -58,5 +58,5 @@ interface OpenAIService
      */
     public function trascribe(string $fileName, string $language = null): string;
 
-    public function text2speech(string $text, string $voice = 'onyx', float $speed = 0.95): string;
+    public function text2speech(string $text, string $voice = 'onyx', float $speed = 0.95, string $model = 'tts-1'): string;
 }

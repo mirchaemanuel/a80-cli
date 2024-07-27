@@ -129,14 +129,14 @@ class OpenAIServiceV1 implements OpenAIService
         return $images;
     }
 
-    public function text2speech(string $text, string $voice = 'onyx', float $speed = 0.95): string
+    public function text2speech(string $text, string $voice = 'onyx', float $speed = 0.95, string $model = 'tts-1'): string
     {
         if ($this->client === null) {
             $this->buildClient();
         }
 
         $response = $this->client->audio()->speech([
-            'model' => 'tts-1',
+            'model' => $model,
             'input' => $text,
             'voice' => $voice,
             'speed' => $speed
