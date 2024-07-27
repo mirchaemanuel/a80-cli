@@ -129,6 +129,22 @@ class OpenAIServiceV1 implements OpenAIService
         return $images;
     }
 
+    public function text2speech(string $text, string $voice = 'onyx', float $speed = 0.95): string
+    {
+        if ($this->client === null) {
+            $this->buildClient();
+        }
+
+        $response = $this->client->audio()->speech([
+            'model' => 'tts-1',
+            'input' => $text,
+            'voice' => $voice,
+            'speed' => $speed
+        ]);
+
+        return $response;
+    }
+
     /**
      * Transcribe audio to text
      *
@@ -170,9 +186,9 @@ class OpenAIServiceV1 implements OpenAIService
         }
 
         $response = $this->client->audio()->transcribe([
-            'model' => 'whisper-1',
-            'file'  => fopen('/Users/ryuujin/workspace/dev2geek/a80-cli/foo.mp4', 'r'),
-                'response_format' => 'verbose_json',
+            'model'           => 'whisper-1',
+            'file'            => fopen('/Users/ryuujin/workspace/dev2geek/a80-cli/foo.mp4', 'r'),
+            'response_format' => 'verbose_json',
 
 
         ]);
@@ -181,5 +197,7 @@ class OpenAIServiceV1 implements OpenAIService
 
         return $response->toArray()['text'];
     }
+
+
 }
 

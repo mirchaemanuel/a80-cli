@@ -57,4 +57,6 @@ interface OpenAIService
      * @return string text from the audio file
      */
     public function trascribe(string $fileName, string $language = null): string;
+
+    public function text2speech(string $text, string $voice = 'onyx', float $speed = 0.95): string;
 }
