@@ -187,13 +187,11 @@ class OpenAIServiceV1 implements OpenAIService
 
         $response = $this->client->audio()->transcribe([
             'model'           => 'whisper-1',
-            'file'            => fopen('/Users/ryuujin/workspace/dev2geek/a80-cli/foo.mp4', 'r'),
+            'file'            => fopen($fileName, 'r'),
             'response_format' => 'verbose_json',
 
 
         ]);
-
-        dd($response);
 
         return $response->toArray()['text'];
     }

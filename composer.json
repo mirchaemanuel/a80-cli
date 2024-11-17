@@ -22,28 +22,28 @@
         }
     ],
     "require": {
-        "php": "^8.1",
+        "php": "^8.3",
         "ext-imagick": "*",
-        "guzzlehttp/guzzle": "^7.8",
-        "illuminate/database": "^10.25",
-        "illuminate/http": "^10.25",
-        "illuminate/view": "^10.25",
-        "intervention/image": "^2.7",
-        "laminas/laminas-text": "^2.10",
-        "laravel-zero/framework": "^10.1",
-        "laravel/prompts": "^0.1.9",
-        "nunomaduro/laravel-console-dusk": "^1.12",
-        "nunomaduro/termwind": "^1.15",
-        "openai-php/client": "^0.7.3",
-        "spatie/image": "^2.2"
+        "guzzlehttp/guzzle": "^7.8.2",
+        "illuminate/database": "^11.32",
+        "illuminate/http": "^v11.32.0",
+        "illuminate/view": "^11.32",
+        "intervention/image": "^3.9.1",
+        "laminas/laminas-text": "^2.12.0",
+        "laravel-zero/framework": "^v11.0.3",
+        "laravel/prompts": "^v0.3.2",
+        "nunomaduro/laravel-console-dusk": "^v1.12.0",
+        "nunomaduro/termwind": "^v2.2.0",
+        "openai-php/client": "^v0.10.3",
+        "spatie/image": "^3.7.4"
     },
     "require-dev": {
         "roave/security-advisories": "dev-latest"
         ,
-        "fakerphp/faker": "^1.9.1",
-        "laravel/pint": "^1.2",
-        "mockery/mockery": "^1.4.4",
-        "pestphp/pest": "^1.21.3"
+        "fakerphp/faker": "^v1.24.0",
+        "laravel/pint": "^v1.18.1",
+        "mockery/mockery": "^1.6.12",
+        "pestphp/pest": "^v3.5.1"
     },
     "autoload": {
         "psr-4": {
