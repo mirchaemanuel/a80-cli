@@ -9,9 +9,10 @@ return [
     |
     | Here you may configure the name of screenshots and logs directory as you wish.
     */
-    'paths' => [
+    'paths'    => [
         'screenshots' => storage_path('screenshots'),
-        'log' => storage_path('laravel-console-dusk/log'),
+        'log'         => storage_path('laravel-console-dusk/log'),
+        'source'      => storage_path('laravel-console-dusk/source'),
     ],
 
     /*
@@ -34,7 +35,7 @@ return [
     | A list of available Chromium command line switches is available at
     | https://peter.sh/experiments/chromium-command-line-switches/
     */
-    'driver' => [
+    'driver'   => [
         'chrome' => [
             'options' => [
                 '--disable-gpu',

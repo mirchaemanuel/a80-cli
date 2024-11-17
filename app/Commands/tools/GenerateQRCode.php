@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Commands\Tools;
+namespace App\Commands\tools;
 
 use Illuminate\Console\Scheduling\Schedule;
 use LaravelZero\Framework\Commands\Command;
 use SimpleSoftwareIO\QrCode\Facades\QrCode;
 
 
-class GenerateQRcode extends Command
+class GenerateQRCode extends Command
 {
     /**
      * The signature of the command.

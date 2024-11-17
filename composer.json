@@ -32,7 +32,7 @@
         "laminas/laminas-text": "^2.12.0",
         "laravel-zero/framework": "^v11.0.3",
         "laravel/prompts": "^v0.3.2",
-        "nunomaduro/laravel-console-dusk": "^v1.12.0",
+        "nunomaduro/laravel-console-dusk": "^v1.11.0",
         "nunomaduro/termwind": "^v2.2.0",
         "openai-php/client": "^v0.10.3",
         "spatie/image": "^3.7.4"
